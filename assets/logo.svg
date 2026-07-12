@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Koyo Japanese">
+  <circle fill="none" stroke="#d4a853" stroke-width="9" cx="256" cy="256" r="168"/>
+  <circle fill="#d4a853" cx="256" cy="52" r="14"/>
+  <circle fill="#d4a853" cx="256" cy="460" r="14"/>
+  <rect fill="none" stroke="#d4a853" stroke-width="9" x="148" y="148" width="216" height="216" rx="2"/>
+  <line stroke="#d4a853" stroke-width="9" x1="148" y1="256" x2="364" y2="256"/>
+</svg>
