@@ -3,521 +3,608 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Koyo Japan — Culture, Tours & Japanese</title>
-<meta name="description" content="Japan's culture, history and manners — explained by a local. Small-group walking tours in Tokyo and online Japanese lessons.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>Koyo Japan — Japan makes sense once you know why</title>
+<meta name="description" content="Short stories behind everyday Japan, six manners that make your trip smoother, a small-group Shinjuku Night Walk, and Japanese lessons — from a Tokyo local.">
+<link rel="canonical" href="https://www.koyojapans.com/japan/">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Koyo Japan — Japan makes sense once you know why">
+<meta property="og:description" content="Short stories behind everyday Japan, six manners that make your trip smoother, a small-group Shinjuku Night Walk, and Japanese lessons — from a Tokyo local.">
+<meta property="og:url" content="https://www.koyojapans.com/japan/">
+<meta property="og:image" content="https://www.koyojapans.com/japan/img/shinjuku-alley-night.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Shippori+Mincho:wght@400;600;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&amp;text=%E3%81%84%E3%81%96%E3%81%8B%E3%82%84%E5%92%8C%E9%85%92%E5%95%86%E3%81%84%E4%B8%AD&amp;display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#f3ede1; --paper2:#ebe3d2; --ink:#1d1a17; --ink2:#4a443d; --muted:#7d7468;
-  --shu:#a8322b; --ai:#26344a; --gold:#b08a3e; --line:rgba(29,26,23,.14);
-  --serif:"Cormorant Garamond","Shippori Mincho",Georgia,serif;
-  --jp:"Shippori Mincho",serif;
-  --sans:Inter,system-ui,-apple-system,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-/* washi grain */
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-main,header,footer{position:relative;z-index:1}
+body{margin:0;background:#0b0b0d}
 a{color:inherit}
-img{max-width:100%}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.jp{font-family:var(--jp)}
-.eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--shu)}
-h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:.005em}
-h2{font-size:clamp(2rem,4.6vw,3.2rem)}
-h3{font-size:1.6rem}
-p{color:var(--ink2)}
-.btn{display:inline-flex;align-items:center;gap:.6em;padding:.85em 1.6em;border:1px solid var(--ink);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:.25s;background:transparent;cursor:pointer}
-.btn:hover{background:var(--ink);color:var(--paper)}
-.btn.solid{background:var(--shu);border-color:var(--shu);color:#fff}
-.btn.solid:hover{background:#8b2721;border-color:#8b2721}
-.btn .arr{transition:transform .25s}.btn:hover .arr{transform:translateX(4px)}
-.pending{font-size:.75rem;color:var(--muted);letter-spacing:.06em;margin-top:.7em}
-
-/* header */
-header{position:sticky;top:0;z-index:20;background:rgba(243,237,225,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-.seal{width:34px;height:34px;background:var(--shu);color:#f7efe2;display:grid;place-items:center;font-family:var(--jp);font-weight:700;font-size:1.05rem;border-radius:3px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.18)}
-.logo b{font-family:var(--serif);font-size:1.35rem;font-weight:600;letter-spacing:.06em}
-.nav ul{display:flex;gap:2rem;list-style:none}
-.nav ul a{text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
-.nav ul a:hover{color:var(--shu)}
-.menu-btn{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--ink)}
-
-/* hero */
-.hero{min-height:calc(100vh - 68px);display:grid;align-items:center;padding:80px 0 60px;position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(2.8rem,7.4vw,5.6rem);font-weight:400}
-.hero h1 em{font-style:italic;color:var(--shu)}
-.hero .lead{font-size:1.12rem;max-width:34em;margin:1.6rem 0 2.2rem}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
-.tategaki{writing-mode:vertical-rl;font-family:var(--jp);font-size:clamp(2.2rem,4.5vw,3.4rem);letter-spacing:.35em;color:var(--ink);line-height:1.6;justify-self:center;position:relative}
-.tategaki small{display:block;font-size:.95rem;letter-spacing:.4em;color:var(--muted);margin-right:1.2rem}
-.enso{position:absolute;right:-120px;top:50%;transform:translateY(-50%);width:640px;opacity:.09;pointer-events:none}
-.scroll-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:.68rem;letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
-
-/* section shell */
-section{padding:110px 0}
-.sec-head{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:end;margin-bottom:56px}
-.sec-num{font-family:var(--jp);font-size:4.4rem;line-height:1;color:var(--shu);opacity:.9}
-.sec-head p{max-width:40em;margin-top:.8rem}
-.rule{height:1px;background:var(--line);border:0}
-
-/* three paths */
-.paths{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
-.path{padding:40px 32px 44px;border-right:1px solid var(--line);text-decoration:none;display:flex;flex-direction:column;gap:14px;transition:background .3s}
-.path:last-child{border-right:0}
-.path:hover{background:var(--paper2)}
-.path .kanji{font-family:var(--jp);font-size:3.2rem;line-height:1;color:var(--ink)}
-.path h3{font-size:1.7rem}
-.path p{font-size:.95rem;flex:1}
-.path .go{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--shu)}
-
+.v2 *{box-sizing:border-box}
+.v2 h1,.v2 h2,.v2 h3{text-wrap:balance}
+.v2 p,.v2 dd{text-wrap:pretty}
+.cap{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.26em;text-transform:uppercase}
+.serif{font-family:'Cormorant Garamond',serif;font-kerning:normal}
+.mincho{font-family:'Shippori Mincho',serif}
+.vert{writing-mode:vertical-rl;text-orientation:upright}
+.wrap{max-width:1320px;margin:0 auto;padding:0 48px}
+.grid12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.mut{color:#9d968a}
+/* focus + skip link */
+.v2 a:focus-visible,.v2 summary:focus-visible,.v2 [tabindex]:focus-visible{outline:2px solid var(--acct);outline-offset:4px;border-radius:2px}
+.skip{position:absolute;left:16px;top:-80px;z-index:20;background:#ece6da;color:#0b0b0d;padding:12px 18px;text-decoration:none}
+.skip:focus{top:16px}
+/* hero: load-in */
+.hero-img{animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.14) translate(-2%,-1.5%)}}
+.ln{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
+.ln>span{display:inline-block;animation:up 1.4s cubic-bezier(.2,.75,.1,1) var(--d,0s) both}
+@keyframes up{from{transform:translateY(112%)}}
+.fade{animation:fade 1.4s ease var(--d,.9s) both}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}}
+.stamp{transform:rotate(-3deg);animation:stamp .9s cubic-bezier(.3,1.4,.5,1) 1.6s both}
+@keyframes stamp{0%{opacity:0;transform:scale(1.9) rotate(-9deg)}55%{opacity:1;transform:scale(.9) rotate(-3deg)}100%{opacity:1;transform:scale(1) rotate(-3deg)}}
+.toc a{text-decoration:none;display:inline-flex;gap:8px;align-items:baseline;padding:8px 0;color:#c9c2b4;transition:color .3s ease}
+.toc a:hover{color:#ece6da}
+.toc .mincho{font-size:15px;letter-spacing:0;color:var(--acct)}
+.marq{display:flex;width:max-content;animation:mq 48s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.cue{animation:cue 2.4s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
+.route{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 6s ease-out .6s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
 /* stories */
-.dark{background:var(--ai);color:#efe8da}
-.dark p{color:#c9c2b4}
-.dark .eyebrow{color:#e0a59c}
-.dark .sec-num{color:#e0a59c}
-.method{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:64px;border:1px solid rgba(239,232,218,.25)}
-.method div{padding:28px;border-right:1px solid rgba(239,232,218,.25)}
-.method div:last-child{border-right:0}
-.method .k{font-family:var(--jp);font-size:1.7rem;color:#efe8da}
-.method b{display:block;font-family:var(--serif);font-size:1.35rem;font-weight:500;margin:.3rem 0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:rgba(255,255,255,.04);border:1px solid rgba(239,232,218,.18);padding:30px 28px;display:flex;flex-direction:column;gap:12px;position:relative}
-.card .tag{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#e0a59c}
-.card h3{font-size:1.45rem;color:#f4eee2}
-.card .q{font-family:var(--jp);font-size:2.4rem;position:absolute;right:22px;top:16px;opacity:.16}
-.card dl{font-size:.92rem}
-.card dt{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#a9a191;margin-top:.7rem}
-.card dd{color:#d9d2c4}
-.follow{margin-top:56px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:36px;border-top:1px solid rgba(239,232,218,.2)}
-.follow .btn{border-color:#efe8da;color:#efe8da}
-.follow .btn:hover{background:#efe8da;color:var(--ai)}
-
+.row{transition:background .5s ease}
+.row:hover{background:rgba(236,230,218,.035)}
+.row .kanji{transition:color .5s ease,-webkit-text-stroke-color .5s ease}
+.row:hover .kanji,.row:focus-within .kanji{color:var(--acc);-webkit-text-stroke-color:var(--acc)}
+.triad{margin:0;display:flex;flex-direction:column;border-top:1px solid rgba(236,230,218,.12)}
+.triad>div{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px solid rgba(236,230,218,.12)}
+.triad dt{font-family:'Shippori Mincho',serif;font-size:22px;line-height:1.2;color:#ece6da}
+.triad dd{margin:0;color:#cfc8ba;font-size:15px;line-height:1.6}
+.triad dd .cap{display:block;font-size:10px;color:#9d968a;margin-bottom:2px}
+.triad .go dt{color:var(--acct)}
+.triad .go dd{color:#ece6da}
 /* manners */
-.manners{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
-.manner{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--line)}
-.manner .n{font-family:var(--jp);font-size:1.9rem;color:var(--shu);line-height:1.1}
-.manner h3{font-size:1.35rem;margin-bottom:.3rem}
-.manner p{font-size:.95rem}
-
-/* tours */
-.tours-bg{background:var(--paper2)}
-.tour{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink);background:var(--paper)}
-.tour-art{position:relative;min-height:460px;background:#15161c;overflow:hidden}
-.tour-art svg{position:absolute;inset:0;width:100%;height:100%}
-.tour-body{padding:48px 44px}
-.tour-body h3{font-size:2.1rem;margin:.5rem 0 1rem}
-.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 24px;margin:26px 0;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.facts dt{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.facts dd{font-family:var(--serif);font-size:1.2rem}
-.steps{list-style:none;counter-reset:s;margin:20px 0 28px}
-.steps li{counter-increment:s;padding-left:2.2rem;position:relative;margin-bottom:.7rem;font-size:.95rem;color:var(--ink2)}
-.steps li::before{content:counter(s,cjk-ideographic);position:absolute;left:0;top:-.1rem;font-family:var(--jp);color:var(--shu);font-size:1.1rem}
-.tour-more{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
-.mini{border:1px solid var(--line);padding:30px;background:var(--paper)}
-.mini h3{font-size:1.4rem;margin:.4rem 0 .6rem}
-.mini p{font-size:.93rem}
-.note{font-size:.8rem;color:var(--muted);margin-top:22px}
-
-/* lessons */
-.lessons{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
-.lesson-mark{aspect-ratio:1;border:1px solid var(--ink);display:grid;place-items:center;position:relative;background:
-  repeating-linear-gradient(0deg,transparent 0 47px,var(--line) 47px 48px),
-  repeating-linear-gradient(90deg,transparent 0 47px,var(--line) 47px 48px)}
-.lesson-mark span{font-family:var(--jp);font-size:clamp(6rem,14vw,10rem);line-height:1}
-.lesson-mark small{position:absolute;bottom:18px;right:20px;font-size:.7rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
-.checks{list-style:none;margin:24px 0 30px}
-.checks li{padding:.55rem 0 .55rem 1.8rem;border-bottom:1px solid var(--line);position:relative;color:var(--ink2);font-size:.96rem}
-.checks li::before{content:"";position:absolute;left:2px;top:1.05rem;width:9px;height:9px;background:var(--shu);transform:rotate(45deg)}
-
-/* about */
-.about{display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:start}
-.about .tategaki{font-size:2.2rem}
-.about blockquote{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.35;font-style:italic;color:var(--ink);margin-bottom:28px}
-.about p+p{margin-top:1rem}
-
-/* faq */
-.faq details{border-bottom:1px solid var(--line);padding:20px 0}
-.faq summary{cursor:pointer;list-style:none;font-family:var(--serif);font-size:1.3rem;display:flex;justify-content:space-between;gap:20px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--shu);font-family:var(--sans);font-weight:300}
-.faq details[open] summary::after{content:"−"}
-.faq details p{margin-top:.8rem;max-width:46em}
-
-/* contact */
-.contact{text-align:center;padding:120px 0}
-.contact h2{margin:.6rem 0 1rem}
-.contact .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
-
-footer{border-top:1px solid var(--ink);padding:40px 0;font-size:.82rem;color:var(--muted)}
-.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
-.foot a{text-decoration:none;margin-left:1.4rem}
-.foot a:first-child{margin-left:0}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-
-/* responsive */
-@media (max-width:900px){
-  .nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line)}
-  .nav ul.open{display:flex}
-  .nav ul a{display:block;padding:16px 24px;border-top:1px solid var(--line)}
-  .menu-btn{display:block}
-  .hero-grid,.lessons,.tour,.about{grid-template-columns:1fr}
-  .hero .tategaki{display:none}
-  .paths,.cards,.method{grid-template-columns:1fr}
-  .path{border-right:0;border-bottom:1px solid var(--line)}
-  .path:last-child{border-bottom:0}
-  .method div{border-right:0;border-bottom:1px solid rgba(239,232,218,.25)}
-  .method div:last-child{border-bottom:0}
-  .manners,.tour-more{grid-template-columns:1fr}
-  .tour-art{min-height:280px}
-  .tour-body{padding:32px 24px}
-  .about .tategaki{display:none}
-  .lesson-mark{max-width:320px}
-  section{padding:80px 0}
-  .sec-head{grid-template-columns:1fr;gap:6px}
-  .sec-num{font-size:3rem}
+.cell{transition:background .45s ease,color .45s ease;background:#f1ebdf;color:#1b1a17}
+.cell .body{color:#4a463e;transition:color .45s ease}
+.cell .no{color:#6b655a;transition:color .45s ease}
+.cell:hover{background:#1b1a17;color:#f1ebdf}
+.cell:hover .body{color:#cfc8ba}
+.cell:hover .no{color:#9d968a}
+.cell:hover .n{color:var(--acct) !important}
+/* noren interlude: an izakaya doorway at night. Sizes in cqw so the whole scene scales as one picture. */
+.scene{position:relative;width:min(1000px,100%);aspect-ratio:1000/640;margin:0 auto;container-type:inline-size}
+.facade{position:absolute;inset:0;background:repeating-linear-gradient(90deg,#1b1612 0 5cqw,#0e0b09 5cqw 5.25cqw);-webkit-mask-image:radial-gradient(ellipse 62% 74% at 50% 44%,#000 45%,transparent 88%);mask-image:radial-gradient(ellipse 62% 74% at 50% 44%,#000 45%,transparent 88%)}
+.beam{position:absolute;z-index:3;left:2cqw;right:2cqw;top:0;height:3.2cqw;border-radius:.2cqw;background:linear-gradient(180deg,#4a3422,#2a1d12 60%,#1c130c);box-shadow:0 .6cqw 1.4cqw rgba(0,0,0,.6)}
+.beam::after{content:"";position:absolute;left:0;right:0;top:.35cqw;height:.12cqw;background:rgba(255,220,170,.14)}
+.post{position:absolute;z-index:2;top:3.2cqw;bottom:6cqw;width:3cqw;background:linear-gradient(90deg,#1c130c,#3a2819 45%,#20160e)}
+.post.l{left:17cqw}.post.r{right:17cqw}
+.door{position:absolute;z-index:1;left:20cqw;right:20cqw;top:3.2cqw;bottom:6cqw;overflow:hidden;background:radial-gradient(ellipse 75% 65% at 50% 58%,#ffe2ad,#f7ae62 42%,#b5632e 82%,#6e3517)}
+.sil{position:absolute;border-radius:50% 50% 0 0;background:rgba(70,30,12,.62);filter:blur(.7cqw)}
+.sil::before{content:"";position:absolute;left:50%;top:-5.2cqw;width:4.8cqw;height:5.4cqw;transform:translateX(-50%);border-radius:50%;background:inherit}
+.sil.a{left:10cqw;top:42.5cqw;width:11cqw;height:10cqw}
+.sil.b{right:8cqw;top:41.5cqw;width:12cqw;height:11cqw;opacity:.8}
+.lattice{position:absolute;inset:0;background:linear-gradient(90deg,transparent calc(50% - .45cqw),#24160b calc(50% - .45cqw) calc(50% + .45cqw),transparent calc(50% + .45cqw)),repeating-linear-gradient(180deg,rgba(40,22,10,.9) 0 .32cqw,transparent .32cqw 9cqw),repeating-linear-gradient(90deg,rgba(40,22,10,.88) 0 .28cqw,transparent .28cqw 3.75cqw);box-shadow:inset 0 0 0 .6cqw #24160b,inset 0 0 4cqw rgba(80,30,8,.45)}
+.koshi{position:absolute;left:0;right:0;bottom:0;height:6.4cqw;border-top:.4cqw solid #1a0f07;background:repeating-linear-gradient(90deg,#2b1b0f 0 3.75cqw,#21140a 3.75cqw 3.9cqw)}
+.ground{position:absolute;left:0;right:0;bottom:0;height:6cqw;background:radial-gradient(ellipse 32% 100% at 50% 0%,rgba(255,186,110,.38),rgba(255,186,110,0) 72%),linear-gradient(180deg,#17120e,#0b0b0d);-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent)}
+.step{position:absolute;z-index:1;left:27cqw;right:27cqw;bottom:3.4cqw;height:1.7cqw;border-radius:.2cqw;border-top:.15cqw solid rgba(255,210,150,.4);background:linear-gradient(180deg,#3a322b,#1f1a16)}
+.rod{position:absolute;z-index:4;left:18cqw;right:18cqw;top:4cqw;height:1.3cqw;border-radius:.65cqw;background:repeating-linear-gradient(90deg,transparent 0 10.6cqw,rgba(70,45,15,.6) 10.6cqw 10.85cqw,rgba(255,240,200,.3) 10.85cqw 11.05cqw,transparent 11.05cqw 12.8cqw),linear-gradient(180deg,#e6cb92,#b8904f 48%,#7c5b2b);box-shadow:0 .5cqw .9cqw rgba(0,0,0,.55)}
+.noren{position:absolute;z-index:5;left:21cqw;right:21cqw;top:4.9cqw;height:33cqw}
+.half{--sk:13deg;position:absolute;top:0;bottom:0;width:calc(50% - .7cqw);display:flex;gap:.5cqw;transform-origin:50% 0}
+.half.l{left:0}.half.r{right:0}
+.panel{flex:1;position:relative;transform-origin:50% 0;animation:cloth 6s ease-in-out infinite alternate}
+.half.l .panel:nth-child(2){animation-duration:7.4s;animation-delay:-2s}
+.half.r .panel:nth-child(1){animation-duration:6.8s;animation-delay:-3.1s}
+.half.r .panel:nth-child(2){animation-duration:8s;animation-delay:-1.2s}
+@keyframes cloth{from{transform:skewX(-1.1deg)}to{transform:skewX(1.1deg)}}
+.panel::before,.panel::after{content:"";position:absolute;z-index:1;top:-1.5cqw;width:1.7cqw;height:2.6cqw;border-radius:.85cqw .85cqw .2cqw .2cqw;background:linear-gradient(90deg,#17213f,#2c3d6b 50%,#17213f);box-shadow:0 .2cqw .3cqw rgba(0,0,0,.45)}
+.panel::before{left:18%}.panel::after{right:18%}
+.cloth{position:absolute;inset:0;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 99.2%,72% 100%,38% 99.4%,0 100%);background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0) 2.6cqw),linear-gradient(0deg,rgba(0,0,0,.35) 0 1.1cqw,rgba(255,255,255,.07) 1.1cqw 1.25cqw,transparent 1.25cqw),linear-gradient(90deg,rgba(0,0,0,.34),rgba(255,255,255,.05) 14%,rgba(0,0,0,.09) 33%,rgba(255,255,255,.06) 52%,rgba(0,0,0,.15) 74%,rgba(255,255,255,.04) 88%,rgba(0,0,0,.36)),linear-gradient(90deg,rgba(255,170,90,.18),transparent 7%,transparent 93%,rgba(255,170,90,.18)),linear-gradient(180deg,#283a66,#1c2a4d 55%,#141e3a)}
+.ch{position:absolute;left:0;right:0;top:37%;transform:translateY(-50%);text-align:center;font-family:'Yuji Boku','Shippori Mincho',serif;font-size:11cqw;line-height:1;color:#efe8da;text-shadow:0 0 .25cqw rgba(239,232,218,.35);filter:url(#bleed)}
+.mon{position:absolute;bottom:4.2cqw;width:8.4cqw;height:8.4cqw;border:.65cqw solid #efe8da;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Yuji Boku','Shippori Mincho',serif;font-size:4.4cqw;line-height:1;color:#efe8da;filter:url(#bleed)}
+.mon.l{right:-4.9cqw}.mon.r{left:-4.9cqw}
+.tex{position:absolute;inset:0;width:100%;height:100%;mix-blend-mode:soft-light;opacity:.85;pointer-events:none}
+.lantern{position:absolute;z-index:6;left:4.5cqw;top:3.2cqw;width:10cqw;height:auto;overflow:visible;transform-origin:50% 0;animation:swing 5.5s ease-in-out infinite alternate;filter:drop-shadow(0 0 2.4cqw rgba(255,70,40,.55))}
+.lglow{position:absolute;left:-7cqw;top:0;width:34cqw;height:38cqw;background:radial-gradient(ellipse at 50% 42%,rgba(235,70,40,.3),rgba(235,70,40,0) 65%);pointer-events:none}
+.sign{position:absolute;z-index:6;right:6cqw;top:3.2cqw;width:5.4cqw;height:auto;transform-origin:50% 0;animation:swing 7s ease-in-out -2s infinite alternate;filter:brightness(.82)}
+@keyframes swing{from{transform:rotate(-2.2deg)}to{transform:rotate(2.2deg)}}
+.note{position:absolute;z-index:6;width:170px;margin:0;font-size:13px;line-height:1.5;color:#a8a194}
+.note .cap{display:block;margin-bottom:6px;font-size:10px}
+.glow{position:absolute;left:50%;top:40px;width:1200px;height:760px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 46%,rgba(255,178,96,.3),rgba(200,64,46,.14) 40%,rgba(11,11,13,0) 68%);pointer-events:none}
+/* links + pills */
+.lnk{text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .4s ease}
+.lnk:hover{background-size:100% 1px}
+.pill{transition:transform .3s ease,background .3s ease,color .3s ease}
+.pill:hover{transform:translateY(-2px)}
+.ghost:hover{background:#ece6da;color:#0b0b0d}
+details summary{list-style:none;cursor:pointer}
+details summary::-webkit-details-marker{display:none}
+details[open] .plus{transform:rotate(45deg)}
+.plus{transition:transform .3s ease}
+/* manifesto: lit line by line */
+.fillt{background-image:linear-gradient(180deg,#ece6da 0 44%,#57524a 56% 100%);background-size:100% 230%;background-position:0 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+/* scroll-driven reveals: only where supported; base state = fully visible */
+@supports (animation-timeline: view()) {
+.v2:not(.still) .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 80%}
+.v2:not(.still) .rv2{animation:rv linear both;animation-timeline:view();animation-range:entry 15% entry 100%}
+.v2:not(.still) .rv3{animation:rv linear both;animation-timeline:view();animation-range:entry 30% cover 40%}
+@keyframes rv{from{opacity:0;transform:translateY(56px)}}
+.v2:not(.still) .fillt{animation:fillt linear both;animation-timeline:view();animation-range:cover 12% cover 52%}
+@keyframes fillt{from{background-position:0 100%}}
+.v2:not(.still) .clipin{animation:clipin linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+@keyframes clipin{from{clip-path:inset(12% 9% 12% 9%)}}
+.v2:not(.still) .clipin .zimg{animation:zimg linear both;animation-timeline:view();animation-range:entry 0% cover 70%}
+@keyframes zimg{from{transform:scale(1.22)}}
+.v2:not(.still) .half.l{animation:partl linear both;animation-timeline:view();animation-range:cover 18% cover 62%}
+.v2:not(.still) .half.r{animation:partr linear both;animation-timeline:view();animation-range:cover 18% cover 62%}
+@keyframes partl{from{transform:none}to{transform:skewX(calc(-1 * var(--sk))) scaleX(.9)}}
+@keyframes partr{from{transform:none}to{transform:skewX(var(--sk)) scaleX(.9)}}
+.v2:not(.still) .door{animation:doorlit linear both;animation-timeline:view();animation-range:cover 10% cover 55%}
+@keyframes doorlit{from{filter:brightness(.55) saturate(.9)}}
+.v2:not(.still) .glow{animation:glow linear both;animation-timeline:view();animation-range:cover 10% cover 60%}
+@keyframes glow{from{opacity:.35}}
 }
-@media (max-width:480px){.wrap{padding:0 16px}.facts{grid-template-columns:1fr 1fr}}
+.still .hero-img,.still .marq,.still .cue,.still .route,.still .ln>span,.still .fade,.still .stamp,.still .panel,.still .lantern,.still .sign{animation:none}
+.still .route{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){
+.hero-img,.marq,.cue,.route,.ln>span,.fade,.stamp,.panel,.rv,.rv2,.rv3,.fillt,.clipin,.zimg,.half,.glow,.door,.lantern,.sign{animation:none !important}
+.route{stroke-dashoffset:0}
+}
+@media (max-width:900px){
+.wrap{padding:0 20px}
+.grid12{grid-template-columns:minmax(0,1fr);row-gap:24px}
+.grid12>*{grid-column:1/-1 !important}
+.hide-m{display:none !important}
+.nav-links{display:none !important}
+.brand-t{font-size:17px !important;letter-spacing:.12em !important}
+.navbtn{padding:0 16px !important}
+.kanji{font-size:52px !important}
+.ledger{grid-template-columns:minmax(0,1fr) !important}
+.glow{width:560px;height:460px}
+.scene{width:calc(100% + 40px);margin:0 -20px}
+.walk-img{min-height:520px !important}
+}
 </style>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"Koyo Japan","url":"https://www.koyojapans.com/japan/","description":"Culture, history and manners of Japan explained by a Tokyo local, with a Shinjuku night walk and Japanese lessons.","sameAs":["https://www.instagram.com/senseijapan.jissen/"]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need to speak Japanese for the tour?","acceptedAnswer":{"@type":"Answer","text":"Not at all. Tours are in English, and you'll pick up a few useful phrases along the way."}},{"@type":"Question","name":"What does the tour fee include?","acceptedAnswer":{"@type":"Answer","text":"Guiding only. Food, drinks and any transport are paid by guests directly, so you only pay for what you choose."}},{"@type":"Question","name":"Is the night walk okay if I don't drink?","acceptedAnswer":{"@type":"Answer","text":"Yes. Many places serve soft drinks and food, and the walk is about how the area works and how to feel at home in it."}},{"@type":"Question","name":"How do I book or pay?","acceptedAnswer":{"@type":"Answer","text":"Through the booking page. If it isn't open yet, send a message on Instagram and you'll be the first to hear."}}]}]</script>
 </head>
 <body>
+<div class="v2" style="--acc: #c8402e; --acct: #e2644f; background: #0b0b0d; color: #ece6da; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.7; position: relative; overflow: hidden">
+<a class="skip cap" href="#stories">Skip to content</a>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#top" aria-label="Koyo Japan home"><span class="seal">和</span><b>KOYO JAPAN</b></a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
-    <ul id="menu" onclick="this.classList.remove('open')">
-      <li><a href="#stories">Stories</a></li>
-      <li><a href="#manners">Manners</a></li>
-      <li><a href="#tours">Tours</a></li>
-      <li><a href="#lessons">Japanese</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </div>
+<!-- film grain over everything -->
+<svg aria-hidden="true" style="position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; mix-blend-mode: overlay; opacity: 0.22">
+<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter>
+<rect width="100%" height="100%" filter="url(#grain)"></rect>
+</svg>
+
+<!-- NAV -->
+<header style="position: absolute; top: 0; left: 0; right: 0; z-index: 4">
+<nav class="wrap fade" style="--d: .2s; height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 24px" aria-label="Main">
+<a href="#top" style="display: flex; align-items: baseline; gap: 14px; text-decoration: none">
+<span class="mincho" style="font-weight: 800; font-size: 20px; color: #e2644f">和</span>
+<span class="serif brand-t" style="font-size: 22px; letter-spacing: .18em; white-space: nowrap">KOYO JAPAN</span>
+</a>
+<div class="nav-links cap" style="display: flex; gap: 36px; color: #c9c2b4">
+<a class="lnk" href="#stories" style="padding: 10px 0">Stories</a>
+<a class="lnk" href="#manners" style="padding: 10px 0">Manners</a>
+<a class="lnk" href="#walk" style="padding: 10px 0">The walk</a>
+<a class="lnk" href="#lessons" style="padding: 10px 0">Japanese</a>
+</div>
+<a class="pill ghost cap navbtn" href="#walk" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; white-space: nowrap; border: 1px solid rgba(236,230,218,.5); border-radius: 999px; text-decoration: none">Book the walk</a>
+</nav>
 </header>
 
-<main id="top">
-
 <!-- HERO -->
-<section class="hero">
-  <svg class="enso" viewBox="0 0 200 200" aria-hidden="true"><path d="M150 40 C 190 80 180 150 120 172 C 60 192 18 150 22 100 C 26 50 70 22 112 26" fill="none" stroke="#1d1a17" stroke-width="13" stroke-linecap="round"/></svg>
-  <div class="wrap hero-grid">
-    <div class="rv">
-      <p class="eyebrow">Culture · History · Manners — from a local</p>
-      <h1>Japan makes sense<br>once you know <em>why.</em></h1>
-      <p class="lead">Short stories about the history behind everyday Japan — the bows, the silence on trains, the tiny bars of Shinjuku. Then come and see it with me, or learn the words to join in.</p>
-      <div class="ctas">
-        <a class="btn solid" href="#tours">Explore tours <span class="arr">→</span></a>
-        <a class="btn" href="#stories">Read the stories</a>
-      </div>
-    </div>
-    <div class="tategaki rv" aria-hidden="true">日本の<br>理由を<br>歩く<small>— 文化・歴史・作法</small></div>
-  </div>
-  <div class="scroll-hint">Scroll</div>
+<section id="top" style="position: relative; min-height: 940px; display: flex; align-items: flex-end; overflow: hidden">
+<img class="hero-img" src="img/shinjuku-alley-night.jpg" alt="A narrow Shinjuku alley at night, lit by red paper lanterns and autumn leaves" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; filter: saturate(1.08) contrast(1.05) brightness(.8)">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,13,.55) 0%, rgba(11,11,13,0) 22%, rgba(11,11,13,.15) 55%, rgba(11,11,13,.97) 100%)"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,11,13,.72) 0%, rgba(11,11,13,0) 58%)"></div>
+<!-- inscription + seal, the way a hanging scroll is signed -->
+<div class="hide-m" aria-hidden="true" style="position: absolute; right: 46px; top: 132px; display: flex; flex-direction: column; align-items: center; gap: 22px">
+<p class="vert mincho fade" style="--d: 1.1s; margin: 0; font-size: 22px; letter-spacing: .5em; color: #f1e9da; line-height: 1">理由を知ると、日本は面白い</p>
+<svg class="stamp" viewBox="0 0 60 60" width="54" height="54">
+<filter id="ink"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7"></feTurbulence><feDisplacementMap in="SourceGraphic" scale="2.6"></feDisplacementMap></filter>
+<g filter="url(#ink)"><rect x="3" y="3" width="54" height="54" rx="4" fill="#c8402e"></rect><text x="30" y="27" text-anchor="middle" font-family="Shippori Mincho, serif" font-weight="800" font-size="21" fill="#f1ebdf">な</text><text x="30" y="50" text-anchor="middle" font-family="Shippori Mincho, serif" font-weight="800" font-size="21" fill="#f1ebdf">ぜ</text></g>
+</svg>
+</div>
+<div class="wrap" style="position: relative; width: 100%; padding-bottom: 64px">
+<p class="cap fade" style="--d: .3s; margin: 0 0 26px; color: #e2644f">序 · Culture, history &amp; manners — from a Tokyo local</p>
+<h1 class="serif" style="margin: 0; font-weight: 300; font-size: clamp(56px, 10.5vw, 168px); line-height: .9; letter-spacing: -.02em"><span class="ln"><span style="--d: .25s">Japan makes</span></span><span class="ln"><span style="--d: .4s">sense once</span></span><span class="ln"><span style="--d: .55s">you know <em style="font-weight: 400; color: #e2644f">why.</em></span></span></h1>
+<div class="grid12 fade" style="--d: 1s; margin-top: 48px; align-items: end">
+<p style="grid-column: 1 / span 5; margin: 0; color: #cfc8ba; font-size: 17px; max-width: 520px">Short stories behind everyday Japan — the bows, the silent trains, the six-seat bars of Shinjuku. Read them here, then walk them with me.</p>
+<div style="grid-column: 7 / span 6; display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end">
+<a class="pill cap" href="#walk" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; background: #c8402e; color: #ffffff; text-decoration: none; border-radius: 999px">Shinjuku Night Walk →</a>
+<a class="pill ghost cap" href="#stories" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; border: 1px solid rgba(236,230,218,.55); text-decoration: none; border-radius: 999px">Read the stories</a>
+</div>
+</div>
+<div class="hide-m fade" style="--d: 1.3s; margin-top: 52px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; border-top: 1px solid rgba(236,230,218,.18); padding-top: 12px">
+<span class="cap mut" style="white-space: nowrap">35.69° N · 139.70° E</span>
+<nav class="toc cap" aria-label="Contents" style="display: flex; gap: 30px">
+<a href="#stories"><span class="mincho">壱</span>Stories</a><a href="#manners"><span class="mincho">弐</span>Manners</a><a href="#walk"><span class="mincho">参</span>The walk</a><a href="#lessons"><span class="mincho">肆</span>Japanese</a><a href="#faq"><span class="mincho">伍</span>FAQ</a>
+</nav>
+<span style="justify-self: end; display: flex; align-items: center; gap: 14px"><span class="cap mut">Scroll</span><span style="width: 1px; height: 40px; background: rgba(236,230,218,.25); position: relative; overflow: hidden; display: block"><span class="cue" style="position: absolute; inset: 0; background: #ece6da; display: block"></span></span></span>
+</div>
+</div>
 </section>
 
-<!-- THREE PATHS -->
-<section style="padding-top:20px">
-  <div class="wrap">
-    <div class="paths rv">
-      <a class="path" href="#stories">
-        <span class="kanji">知</span>
-        <span class="eyebrow">Learn</span>
-        <h3>Stories &amp; Manners</h3>
-        <p>Bite-sized videos on Instagram: one scene, the reason behind it, and what to do. Free, always.</p>
-        <span class="go">Watch →</span>
-      </a>
-      <a class="path" href="#tours">
-        <span class="kanji">歩</span>
-        <span class="eyebrow">Walk</span>
-        <h3>Small-Group Tours</h3>
-        <p>Walk Tokyo with a local who explains the “why”. Max 4 guests, so you can actually ask questions.</p>
-        <span class="go">See tours →</span>
-      </a>
-      <a class="path" href="#lessons">
-        <span class="kanji">話</span>
-        <span class="eyebrow">Speak</span>
-        <h3>Japanese Lessons</h3>
-        <p>Friendly 1-on-1 online lessons for real conversations — at the café, on the train, with new friends.</p>
-        <span class="go">Start speaking →</span>
-      </a>
-    </div>
-  </div>
+<!-- MARQUEE -->
+<div aria-hidden="true" style="border-top: 1px solid rgba(236,230,218,.14); border-bottom: 1px solid rgba(236,230,218,.14); padding: 22px 0; overflow: hidden; white-space: nowrap">
+<div class="marq">
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">お通し</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">otōshi — the small welcome dish</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">ご馳走様</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">gochisōsama — thanks for the meal</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">大丈夫ですか</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">daijōbu desu ka — is it okay?</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">一期一会</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">ichigo ichie — one time, one meeting</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">横丁</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">yokochō — a side lane</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">暖簾</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">noren — the shop curtain</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">提灯</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">chōchin — paper lantern</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">お通し</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">otōshi — the small welcome dish</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">ご馳走様</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">gochisōsama — thanks for the meal</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">大丈夫ですか</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">daijōbu desu ka — is it okay?</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">一期一会</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">ichigo ichie — one time, one meeting</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">横丁</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">yokochō — a side lane</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">暖簾</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">noren — the shop curtain</span><span style="color: #e2644f">·</span></span>
+
+<span style="display: inline-flex; align-items: baseline; gap: 14px; padding: 0 34px"><span class="mincho" style="font-size: 26px">提灯</span><span class="serif" style="font-style: italic; font-size: 22px; color: #a8a194">chōchin — paper lantern</span><span style="color: #e2644f">·</span></span>
+
+</div>
+</div>
+
+<!-- MANIFESTO -->
+<section style="padding: 160px 0 140px">
+<div class="wrap grid12">
+<p class="mincho hide-m" aria-hidden="true" style="grid-column: 1 / span 2; margin: 0; font-size: 120px; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(236,230,218,.3)">縁</p>
+<div style="grid-column: 3 / span 9">
+<p class="serif fillt" style="margin: 0; font-weight: 300; font-size: clamp(30px, 3.6vw, 52px); line-height: 1.22">Most guides tell you <em style="color: #a8a194">what</em> to do in Japan. I'm a Tokyo local who explains <em style="color: #e2644f">why</em> — on Instagram, on foot through Shinjuku's lanes, and in Japanese lessons. Once the reasons click, the country stops feeling like a test and starts feeling like a welcome.</p>
+<div class="rv" style="margin-top: 48px; display: flex; gap: 56px; flex-wrap: wrap">
+<a href="#stories" style="text-decoration: none"><p class="serif" style="margin: 0; font-size: 46px; line-height: 1">01</p><p class="cap mut" style="margin: 6px 0 0">Read · the stories</p></a>
+<a href="#walk" style="text-decoration: none"><p class="serif" style="margin: 0; font-size: 46px; line-height: 1">02</p><p class="cap mut" style="margin: 6px 0 0">Walk · the night lanes</p></a>
+<a href="#lessons" style="text-decoration: none"><p class="serif" style="margin: 0; font-size: 46px; line-height: 1">03</p><p class="cap mut" style="margin: 6px 0 0">Speak · the words</p></a>
+</div>
+</div>
+</div>
 </section>
 
-<!-- STORIES -->
-<section id="stories" class="dark">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="sec-num">壱</span>
-      <div>
-        <p class="eyebrow">The Stories</p>
-        <h2>Every custom has a backstory.</h2>
-        <p>Each video follows the same simple shape, so you leave knowing what to actually do.</p>
-      </div>
-    </div>
+<!-- STORIES: see / why / do -->
+<section id="stories" style="padding: 0 0 150px">
+<div class="wrap">
+<div class="grid12 rv" style="align-items: end; margin-bottom: 18px">
+<p class="cap" style="grid-column: 1 / span 3; margin: 0; color: #e2644f">壱 · Stories</p>
+<h2 class="serif" style="grid-column: 4 / span 7; margin: 0; font-weight: 300; font-size: clamp(40px, 5vw, 76px); line-height: 1">Every custom has a backstory.</h2>
+<a class="cap lnk hide-m" data-link="instagram" href="#" style="grid-column: 11 / span 2; justify-self: end; color: #c9c2b4">All on Instagram →</a>
+</div>
+<div class="grid12 rv" style="margin-bottom: 44px">
+<p class="mut" style="grid-column: 4 / span 6; margin: 0; font-size: 15px">Each story follows the same three beats — what you notice, why it happens, and what to do — so you can use it the same day.</p>
+</div>
 
-    <div class="method rv">
-      <div><span class="k">場面</span><b>The scene</b><p>Something you will see in Japan and wonder about.</p></div>
-      <div><span class="k">理由</span><b>The reason</b><p>The history and culture that shaped it.</p></div>
-      <div><span class="k">動き</span><b>Your move</b><p>How to act so locals feel at ease — and so do you.</p></div>
-    </div>
+<article class="row rv" style="border-top: 1px solid rgba(236,230,218,.16); padding: 44px 0">
+<div class="grid12" style="align-items: start">
+<span class="kanji mincho" aria-hidden="true" style="grid-column: 1 / span 2; font-size: 96px; line-height: .9; color: transparent; -webkit-text-stroke: 1px rgba(236,230,218,.55)">箸</span>
+<div style="grid-column: 3 / span 4; display: flex; flex-direction: column; gap: 14px; padding-right: 12px">
+<p class="cap mut" style="margin: 0">01 — Izakaya · Shinjuku · 3 min</p>
+<h3 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(30px, 3vw, 46px); line-height: 1.05">The small dish you didn't order</h3>
+</div>
+<dl class="triad" style="grid-column: 7 / span 6">
+<div><dt aria-hidden="true">見</dt><dd><span class="cap">You notice</span>You sit down and a tiny appetizer arrives — later, a “table charge” on the bill.</dd></div>
+<div><dt aria-hidden="true">理</dt><dd><span class="cap">The reason</span>Called otōshi, it is widely treated as a seat charge with a welcome bite, not a mistake.</dd></div>
+<div class="go"><dt aria-hidden="true">動</dt><dd><span class="cap">Your move</span>Enjoy it. If budget matters, ask about the charge before you sit.</dd></div>
+</dl>
+</div>
+</article>
 
-    <div class="cards">
-      <article class="card rv">
-        <span class="q">箸</span>
-        <span class="tag">Izakaya · Shinjuku</span>
-        <h3>The small dish you didn't order</h3>
-        <dl>
-          <dt>Scene</dt><dd>You sit down and a tiny appetizer arrives — and later a “table charge” on the bill.</dd>
-          <dt>Reason</dt><dd>Called <i>otōshi</i>, it is widely treated as a seat charge with a welcome bite, rather than a mistake.</dd>
-          <dt>Your move</dt><dd>Enjoy it. If the budget matters, ask about the charge before you sit.</dd>
-        </dl>
-      </article>
-      <article class="card rv">
-        <span class="q">静</span>
-        <span class="tag">Trains · Everyday</span>
-        <h3>Why the train is so quiet</h3>
-        <dl>
-          <dt>Scene</dt><dd>A packed carriage, yet almost no one is talking — and phones are on silent.</dd>
-          <dt>Reason</dt><dd>Shared spaces are seen as everyone's space; not adding noise is a quiet form of consideration.</dd>
-          <dt>Your move</dt><dd>Keep voices low, skip phone calls, and wear your backpack on your front.</dd>
-        </dl>
-      </article>
-      <article class="card rv">
-        <span class="q">灯</span>
-        <span class="tag">History · Shinjuku</span>
-        <h3>The alleys that rose from the ruins</h3>
-        <dl>
-          <dt>Scene</dt><dd>Narrow lanes packed with tiny bars, right next to giant department stores.</dd>
-          <dt>Reason</dt><dd>Areas like Omoide Yokocho are said to trace back to postwar open-air markets near the station.</dd>
-          <dt>Your move</dt><dd>Many bars seat only a few people — peek in, smile, and ask “<i>Daijōbu desu ka?</i>”</dd>
-        </dl>
-      </article>
-    </div>
+<article class="row rv" style="border-top: 1px solid rgba(236,230,218,.16); padding: 44px 0">
+<div class="grid12" style="align-items: start">
+<span class="kanji mincho" aria-hidden="true" style="grid-column: 1 / span 2; font-size: 96px; line-height: .9; color: transparent; -webkit-text-stroke: 1px rgba(236,230,218,.55)">静</span>
+<div style="grid-column: 3 / span 4; display: flex; flex-direction: column; gap: 14px; padding-right: 12px">
+<p class="cap mut" style="margin: 0">02 — Trains · Everyday · 2 min</p>
+<h3 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(30px, 3vw, 46px); line-height: 1.05">Why the train is so quiet</h3>
+</div>
+<dl class="triad" style="grid-column: 7 / span 6">
+<div><dt aria-hidden="true">見</dt><dd><span class="cap">You notice</span>A packed carriage, yet almost no one is talking — and phones are on silent.</dd></div>
+<div><dt aria-hidden="true">理</dt><dd><span class="cap">The reason</span>Shared space is seen as everyone's space; not adding noise is a quiet form of consideration.</dd></div>
+<div class="go"><dt aria-hidden="true">動</dt><dd><span class="cap">Your move</span>Keep voices low, skip calls, and wear your backpack on your front.</dd></div>
+</dl>
+</div>
+</article>
 
-    <div class="follow rv">
-      <p style="max-width:32em">New stories every week. Follow along on Instagram — no account needed to watch.</p>
-      <a class="btn" data-link="instagram" href="#">Follow on Instagram <span class="arr">→</span></a>
-    </div>
-  </div>
+<article class="row rv" style="border-top: 1px solid rgba(236,230,218,.16); padding: 44px 0">
+<div class="grid12" style="align-items: start">
+<span class="kanji mincho" aria-hidden="true" style="grid-column: 1 / span 2; font-size: 96px; line-height: .9; color: transparent; -webkit-text-stroke: 1px rgba(236,230,218,.55)">灯</span>
+<div style="grid-column: 3 / span 4; display: flex; flex-direction: column; gap: 14px; padding-right: 12px">
+<p class="cap mut" style="margin: 0">03 — History · Shinjuku · 4 min</p>
+<h3 class="serif" style="margin: 0; font-weight: 400; font-size: clamp(30px, 3vw, 46px); line-height: 1.05">The alleys that rose from the ruins</h3>
+</div>
+<dl class="triad" style="grid-column: 7 / span 6">
+<div><dt aria-hidden="true">見</dt><dd><span class="cap">You notice</span>Narrow lanes of tiny bars, right beside giant department stores.</dd></div>
+<div><dt aria-hidden="true">理</dt><dd><span class="cap">The reason</span>Lanes like Omoide Yokocho are said to trace back to postwar open-air markets near the station.</dd></div>
+<div class="go"><dt aria-hidden="true">動</dt><dd><span class="cap">Your move</span>Many bars seat only a few — peek in, smile, and ask “Daijōbu desu ka?”</dd></div>
+</dl>
+</div>
+</article>
+
+<div style="border-top: 1px solid rgba(236,230,218,.16)"></div>
+</div>
 </section>
 
-<!-- MANNERS -->
-<section id="manners">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="sec-num">弐</span>
-      <div>
-        <p class="eyebrow">Manners, without the stress</p>
-        <h2>Six things that make your trip smoother.</h2>
-        <p>Nobody expects visitors to be perfect. These small habits simply make every encounter warmer.</p>
-      </div>
-    </div>
-    <div class="manners">
-      <div class="manner rv"><span class="n">一</span><div><h3>Shoes off where floors rise</h3><p>A raised step at the entrance usually means shoes come off. Look for slippers — and never wear them onto tatami.</p></div></div>
-      <div class="manner rv"><span class="n">二</span><div><h3>No tip, just thanks</h3><p>Tipping is not part of the culture and can cause confusion. A clear “<i>Gochisōsama deshita</i>” after a meal goes further.</p></div></div>
-      <div class="manner rv"><span class="n">三</span><div><h3>Stand left in Tokyo</h3><p>On escalators, Tokyo locals generally keep to the left (Osaka is often the opposite). Follow the line in front of you.</p></div></div>
-      <div class="manner rv"><span class="n">四</span><div><h3>Chopsticks rest, never stand</h3><p>Sticking chopsticks upright in rice recalls funeral rites. Lay them across the holder or the edge of your bowl.</p></div></div>
-      <div class="manner rv"><span class="n">五</span><div><h3>Take your rubbish with you</h3><p>Public bins are rare. Most people carry their rubbish home — a small bag in your day pack helps.</p></div></div>
-      <div class="manner rv"><span class="n">六</span><div><h3>A slight bow says a lot</h3><p>A small nod of the head when you thank, greet or apologise is perfectly polite. No need for a deep bow.</p></div></div>
-    </div>
-  </div>
+<!-- MANNERS: ledger -->
+<section id="manners" style="background: #f1ebdf; color: #1b1a17; padding: 140px 0">
+<div class="wrap">
+<div class="grid12 rv" style="margin-bottom: 64px; align-items: end">
+<p class="cap" style="grid-column: 1 / span 3; margin: 0; color: #a5321f">弐 · Manners</p>
+<h2 class="serif" style="grid-column: 4 / span 6; margin: 0; font-weight: 300; font-size: clamp(40px, 5vw, 76px); line-height: 1">Six small things that make the trip smoother.</h2>
+<p class="vert mincho hide-m" aria-hidden="true" style="grid-column: 12 / span 1; justify-self: end; margin: 0; font-size: 18px; letter-spacing: .4em; color: #6b655a">作法帳</p>
+</div>
+<div class="ledger" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid #1b1a17; border-left: 1px solid rgba(27,26,23,.2)">
+
+<div class="cell rv" style="border-right: 1px solid rgba(27,26,23,.2); border-bottom: 1px solid rgba(27,26,23,.2); padding: 34px 30px 38px; display: flex; flex-direction: column; gap: 14px; min-height: 280px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start"><span class="mincho n" style="font-size: 46px; line-height: 1; font-weight: 800; color: #a5321f">一</span><span class="cap no">01 / 06</span></div>
+<h3 class="serif" style="margin: 0; font-weight: 500; font-size: 28px; line-height: 1.1">Shoes off where floors rise</h3>
+<p class="body" style="margin: 0; font-size: 15px">A raised step at the entrance usually means shoes come off. Look for slippers — and never wear them onto tatami.</p>
+</div>
+
+<div class="cell rv2" style="border-right: 1px solid rgba(27,26,23,.2); border-bottom: 1px solid rgba(27,26,23,.2); padding: 34px 30px 38px; display: flex; flex-direction: column; gap: 14px; min-height: 280px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start"><span class="mincho n" style="font-size: 46px; line-height: 1; font-weight: 800; color: #a5321f">二</span><span class="cap no">02 / 06</span></div>
+<h3 class="serif" style="margin: 0; font-weight: 500; font-size: 28px; line-height: 1.1">No tip, just thanks</h3>
+<p class="body" style="margin: 0; font-size: 15px">Tipping is not part of the culture and can cause confusion. A clear “Gochisōsama deshita” after a meal goes further.</p>
+</div>
+
+<div class="cell rv3" style="border-right: 1px solid rgba(27,26,23,.2); border-bottom: 1px solid rgba(27,26,23,.2); padding: 34px 30px 38px; display: flex; flex-direction: column; gap: 14px; min-height: 280px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start"><span class="mincho n" style="font-size: 46px; line-height: 1; font-weight: 800; color: #a5321f">三</span><span class="cap no">03 / 06</span></div>
+<h3 class="serif" style="margin: 0; font-weight: 500; font-size: 28px; line-height: 1.1">Stand left in Tokyo</h3>
+<p class="body" style="margin: 0; font-size: 15px">On escalators, Tokyo locals generally keep left (Osaka is often the opposite). Follow the line in front of you.</p>
+</div>
+
+<div class="cell rv" style="border-right: 1px solid rgba(27,26,23,.2); border-bottom: 1px solid rgba(27,26,23,.2); padding: 34px 30px 38px; display: flex; flex-direction: column; gap: 14px; min-height: 280px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start"><span class="mincho n" style="font-size: 46px; line-height: 1; font-weight: 800; color: #a5321f">四</span><span class="cap no">04 / 06</span></div>
+<h3 class="serif" style="margin: 0; font-weight: 500; font-size: 28px; line-height: 1.1">Chopsticks rest, never stand</h3>
+<p class="body" style="margin: 0; font-size: 15px">Chopsticks upright in rice recall funeral rites. Lay them across the holder or the edge of your bowl.</p>
+</div>
+
+<div class="cell rv2" style="border-right: 1px solid rgba(27,26,23,.2); border-bottom: 1px solid rgba(27,26,23,.2); padding: 34px 30px 38px; display: flex; flex-direction: column; gap: 14px; min-height: 280px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start"><span class="mincho n" style="font-size: 46px; line-height: 1; font-weight: 800; color: #a5321f">五</span><span class="cap no">05 / 06</span></div>
+<h3 class="serif" style="margin: 0; font-weight: 500; font-size: 28px; line-height: 1.1">Take your rubbish with you</h3>
+<p class="body" style="margin: 0; font-size: 15px">Public bins are rare. Most people carry rubbish home — a small bag in your day pack helps.</p>
+</div>
+
+<div class="cell rv3" style="border-right: 1px solid rgba(27,26,23,.2); border-bottom: 1px solid rgba(27,26,23,.2); padding: 34px 30px 38px; display: flex; flex-direction: column; gap: 14px; min-height: 280px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start"><span class="mincho n" style="font-size: 46px; line-height: 1; font-weight: 800; color: #a5321f">六</span><span class="cap no">06 / 06</span></div>
+<h3 class="serif" style="margin: 0; font-weight: 500; font-size: 28px; line-height: 1.1">A slight bow says a lot</h3>
+<p class="body" style="margin: 0; font-size: 15px">A small nod when you thank, greet or apologise is perfectly polite. No need for a deep bow.</p>
+</div>
+
+</div>
+</div>
 </section>
 
-<!-- TOURS -->
-<section id="tours" class="tours-bg">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="sec-num">参</span>
-      <div>
-        <p class="eyebrow">Walk with a local</p>
-        <h2>Tours that explain the “why”.</h2>
-        <p>Small groups, unhurried pace, and plenty of room for questions. The stories you watched — in person.</p>
-      </div>
-    </div>
+<!-- INTERLUDE: the noren — an izakaya doorway at night -->
+<section aria-labelledby="noren-h" style="position: relative; overflow: hidden; padding: 110px 0 120px; background: #0b0b0d">
+<svg width="0" height="0" aria-hidden="true" style="position: absolute">
+<filter id="bleed"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="9" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3"></feDisplacementMap></filter>
+<filter id="dyeA" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".05 .004" numOctaves="3" seed="4"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter>
+<filter id="dyeB" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".05 .004" numOctaves="3" seed="11"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter>
+<filter id="weave" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="1" seed="2"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix></filter>
+</svg>
+<div class="glow" aria-hidden="true"></div>
+<div class="wrap" style="position: relative">
+<div class="scene" aria-hidden="true">
+<div class="facade"></div>
+<div class="lglow"></div>
+<div class="door">
+<div class="sil a"></div><div class="sil b"></div>
+<div class="lattice"></div>
+<div class="koshi"></div>
+</div>
+<div class="ground"></div>
+<div class="step"></div>
+<div class="post l"></div><div class="post r"></div>
+<div class="beam"></div>
+<div class="rod"></div>
+<div class="noren">
+<div class="half l">
+<div class="panel"><div class="cloth"><span class="ch">い</span><svg class="tex"><rect width="100%" height="100%" filter="url(#dyeA)"></rect><rect width="100%" height="100%" filter="url(#weave)" opacity=".5"></rect></svg></div></div>
+<div class="panel"><div class="cloth"><span class="ch">ざ</span><span class="mon l">和</span><svg class="tex"><rect width="100%" height="100%" filter="url(#dyeB)"></rect><rect width="100%" height="100%" filter="url(#weave)" opacity=".5"></rect></svg></div></div>
+</div>
+<div class="half r">
+<div class="panel"><div class="cloth"><span class="ch">か</span><span class="mon r">和</span><svg class="tex"><rect width="100%" height="100%" filter="url(#dyeA)"></rect><rect width="100%" height="100%" filter="url(#weave)" opacity=".5"></rect></svg></div></div>
+<div class="panel"><div class="cloth"><span class="ch">や</span><svg class="tex"><rect width="100%" height="100%" filter="url(#dyeB)"></rect><rect width="100%" height="100%" filter="url(#weave)" opacity=".5"></rect></svg></div></div>
+</div>
+</div>
+<svg class="lantern" viewBox="0 0 100 210">
+<defs>
+<radialGradient id="lbody" cx="44%" cy="48%" r="62%"><stop offset="0" stop-color="#ff9a66"></stop><stop offset=".45" stop-color="#e2392a"></stop><stop offset="1" stop-color="#7d1410"></stop></radialGradient>
+<clipPath id="lclip"><path d="M30 44 C 0 64, 0 160, 30 180 L 70 180 C 100 160, 100 64, 70 44 Z"></path></clipPath>
+</defs>
+<line x1="50" y1="0" x2="50" y2="34" stroke="#2a1a0e" stroke-width="2"></line>
+<path d="M30 44 C 0 64, 0 160, 30 180 L 70 180 C 100 160, 100 64, 70 44 Z" fill="url(#lbody)"></path>
+<g clip-path="url(#lclip)"><g fill="none" stroke="rgba(90,10,6,.45)" stroke-width="1.1"><path d="M0 53 Q 50 58 100 53"></path><path d="M0 62 Q 50 67 100 62"></path><path d="M0 71 Q 50 76 100 71"></path><path d="M0 80 Q 50 85 100 80"></path><path d="M0 89 Q 50 94 100 89"></path><path d="M0 98 Q 50 103 100 98"></path><path d="M0 107 Q 50 112 100 107"></path><path d="M0 116 Q 50 121 100 116"></path><path d="M0 125 Q 50 130 100 125"></path><path d="M0 134 Q 50 139 100 134"></path><path d="M0 143 Q 50 148 100 143"></path><path d="M0 152 Q 50 157 100 152"></path><path d="M0 161 Q 50 166 100 161"></path><path d="M0 170 Q 50 175 100 170"></path><path d="M0 179 Q 50 184 100 179"></path></g><ellipse cx="30" cy="110" rx="7" ry="46" fill="rgba(255,230,200,.2)"></ellipse></g>
+<text x="50" y="133" text-anchor="middle" font-family="Yuji Boku, Shippori Mincho, serif" font-size="50" fill="#1d0c08" opacity=".88">酒</text>
+<rect x="27" y="32" width="46" height="14" rx="3" fill="#141110"></rect>
+<rect x="27" y="178" width="46" height="14" rx="3" fill="#141110"></rect>
+<path d="M50 192 L 50 208" stroke="#141110" stroke-width="3"></path>
+</svg>
+<svg class="sign" viewBox="0 0 60 220">
+<defs><linearGradient id="wood" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#a87c45"></stop><stop offset=".45" stop-color="#d8b67c"></stop><stop offset="1" stop-color="#9a6e3a"></stop></linearGradient></defs>
+<path d="M10 46 L 30 6 L 50 46" fill="none" stroke="#2a1a0e" stroke-width="1.6"></path>
+<circle cx="30" cy="6" r="3" fill="#3a2a1c"></circle>
+<rect x="4" y="44" width="52" height="170" rx="3" fill="url(#wood)"></rect>
+<g fill="none" stroke="rgba(90,55,20,.35)" stroke-width=".8"><path d="M14 50 C 16 110, 12 160, 15 208"></path><path d="M41 50 C 39 100, 44 150, 40 208"></path><path d="M27 60 C 29 120, 26 170, 28 205"></path></g>
+<rect x="4" y="44" width="52" height="170" rx="3" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="1.2"></rect>
+<g font-family="Yuji Boku, Shippori Mincho, serif" font-size="34" fill="#1d120a" text-anchor="middle"><text x="30" y="92">商</text><text x="30" y="140">い</text><text x="30" y="188">中</text></g>
+</svg>
+</div>
+<p class="note hide-m" style="left: max(0px, calc(50% - 500px)); top: 290px"><span class="cap" style="color: #e2644f">赤提灯 · aka-chōchin</span>A red lantern often marks a casual place to eat and drink.</p>
+<p class="note hide-m" style="right: max(0px, calc(50% - 500px)); top: 270px; text-align: right"><span class="cap" style="color: #e2644f">商い中 · akinai-chū</span>“Open for business” — hung by the door while the shop is open.</p>
+<div class="rv" style="margin: 56px auto 0; max-width: 720px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px">
+<p class="cap" style="margin: 0; color: #e2644f">暖簾をくぐる · noren o kuguru</p>
+<h2 id="noren-h" class="serif" style="margin: 0; font-weight: 300; font-size: clamp(40px, 5.4vw, 84px); line-height: 1">The hardest step<br>is the curtain.</h2>
+<p style="margin: 0; color: #cfc8ba; max-width: 560px">A cloth curtain hung in a doorway usually means the place is open. Ducking through it is how you walk in — and the walk ends with you doing exactly that.</p>
+</div>
+</div>
+</section>
 
-    <article class="tour rv">
-      <div class="tour-art" aria-hidden="true">
-        <svg viewBox="0 0 400 460" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <radialGradient id="glow" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#3a2a2a"/><stop offset="1" stop-color="#121219"/></radialGradient>
-            <radialGradient id="lan" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffcf8a"/><stop offset=".55" stop-color="#e0532f"/><stop offset="1" stop-color="#e0532f" stop-opacity="0"/></radialGradient>
-          </defs>
-          <rect width="400" height="460" fill="url(#glow)"/>
-          <!-- alley buildings -->
-          <path d="M0 120 L120 150 L120 460 L0 460Z" fill="#0d0d12"/>
-          <path d="M400 110 L280 150 L280 460 L400 460Z" fill="#0d0d12"/>
-          <path d="M120 150 L170 200 L170 460 L120 460Z" fill="#17171f"/>
-          <path d="M280 150 L230 200 L230 460 L280 460Z" fill="#17171f"/>
-          <!-- signs -->
-          <rect x="30" y="200" width="26" height="90" fill="#a8322b" opacity=".85"/>
-          <text x="43" y="222" fill="#f6e7cf" font-family="Shippori Mincho" font-size="15" text-anchor="middle">酒</text>
-          <text x="43" y="244" fill="#f6e7cf" font-family="Shippori Mincho" font-size="15" text-anchor="middle">場</text>
-          <rect x="340" y="190" width="24" height="70" fill="#f1e6cf" opacity=".85"/>
-          <text x="352" y="212" fill="#1d1a17" font-family="Shippori Mincho" font-size="14" text-anchor="middle">焼</text>
-          <text x="352" y="232" fill="#1d1a17" font-family="Shippori Mincho" font-size="14" text-anchor="middle">鳥</text>
-          <!-- lanterns -->
-          <g><circle cx="95" cy="320" r="40" fill="url(#lan)" opacity=".7"/><ellipse cx="95" cy="320" rx="13" ry="17" fill="#d6452a"/><rect x="88" y="301" width="14" height="3" fill="#2a1a12"/><rect x="88" y="336" width="14" height="3" fill="#2a1a12"/></g>
-          <g><circle cx="305" cy="300" r="40" fill="url(#lan)" opacity=".7"/><ellipse cx="305" cy="300" rx="13" ry="17" fill="#d6452a"/><rect x="298" y="281" width="14" height="3" fill="#2a1a12"/><rect x="298" y="316" width="14" height="3" fill="#2a1a12"/></g>
-          <g><circle cx="150" cy="270" r="26" fill="url(#lan)" opacity=".55"/><ellipse cx="150" cy="270" rx="8" ry="11" fill="#d6452a"/></g>
-          <g><circle cx="250" cy="262" r="26" fill="url(#lan)" opacity=".55"/><ellipse cx="250" cy="262" rx="8" ry="11" fill="#d6452a"/></g>
-          <!-- noren -->
-          <g fill="#26344a"><rect x="178" y="330" width="13" height="34"/><rect x="194" y="330" width="13" height="34"/><rect x="210" y="330" width="13" height="34"/></g>
-          <rect x="170" y="364" width="60" height="96" fill="#f3c98b" opacity=".18"/>
-          <!-- ground reflection -->
-          <path d="M120 460 L170 380 L230 380 L280 460Z" fill="#e0532f" opacity=".08"/>
-          <text x="200" y="70" fill="#f3ede1" opacity=".9" font-family="Cormorant Garamond" font-style="italic" font-size="22" text-anchor="middle">Shinjuku, after dark</text>
-        </svg>
-      </div>
-      <div class="tour-body">
-        <p class="eyebrow">Signature tour · Tokyo</p>
-        <h3>Shinjuku Night Walk</h3>
-        <p>Learn how Shinjuku's tiny bars and izakaya work — the cover charge, the small dish, how to order and how to read the room. At the end, you pick a place and walk in on your own, confident.</p>
-        <dl class="facts">
-          <div><dt>Duration</dt><dd>About 90 min</dd></div>
-          <div><dt>Group</dt><dd>Max 4 guests</dd></div>
-          <div><dt>Meeting</dt><dd>Near Shinjuku Station</dd></div>
-          <div><dt>Language</dt><dd>English</dd></div>
-        </dl>
-        <ol class="steps">
-          <li>Meet near the station and get the lay of the land.</li>
-          <li>Walk the lanes and hear how they came to be.</li>
-          <li>Practise how to order and ask about charges.</li>
-          <li>Choose your own bar — and step inside with confidence.</li>
-        </ol>
-        <p style="font-size:.88rem">The tour fee covers guiding only. Food and drinks are ordered and paid by guests directly at each venue.</p>
-        <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn solid" data-link="tourBooking" href="#">Check dates &amp; book <span class="arr">→</span></a>
-          <a class="btn" data-link="instagram" href="#">Ask a question</a>
-        </div>
-        <p class="pending" data-pending="tourBooking">Booking opens soon — send a message to be notified.</p>
-      </div>
-    </article>
-
-    <div class="tour-more">
-      <div class="mini rv">
-        <p class="eyebrow">Private · On request</p>
-        <h3>Your own walk</h3>
-        <p>Travelling as a family or a group of friends? Tell me what you're curious about — history, everyday manners, food culture — and we'll shape a walk around it.</p>
-        <a class="btn" data-link="instagram" href="#" style="margin-top:20px">Send a request</a>
-      </div>
-      <div class="mini rv">
-        <p class="eyebrow">Before you arrive</p>
-        <h3>Not visiting yet?</h3>
-        <p>Start with the free stories and the manners guide. When you land, you'll already know the “why” — the tour just brings it to life.</p>
-        <a class="btn" href="#stories" style="margin-top:20px">Read first</a>
-      </div>
-    </div>
-    <p class="note">Details such as price, schedule and cancellation policy will be shown on the booking page.</p>
-  </div>
+<!-- THE WALK -->
+<span id="tours"></span>
+<section id="walk" style="padding: 120px 0 140px">
+<div class="wrap">
+<p class="cap rv" style="margin: 0 0 22px; color: #e2644f">参 · The walk</p>
+<div class="grid12" style="align-items: stretch">
+<div class="clipin walk-img" style="grid-column: 1 / span 7; position: relative; min-height: 780px; overflow: hidden">
+<img class="zimg" src="img/alley-red-lanterns-narrow.jpg" alt="A narrow lane of small bars lit by red paper lanterns" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; filter: saturate(1.05) contrast(1.04)">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,13,.1) 0%, rgba(11,11,13,0) 40%, rgba(11,11,13,.85) 100%)"></div>
+<svg aria-hidden="true" viewBox="0 0 600 760" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<path class="route" d="M90 690 C 170 610, 130 540, 220 500 S 380 420, 330 330 S 420 210, 510 130" fill="none" stroke="#f1e9da" stroke-width="2" stroke-dasharray="900" stroke-linecap="round" opacity=".85"></path>
+<g font-family="Shippori Mincho, serif" font-size="17" font-weight="800" text-anchor="middle">
+<circle cx="90" cy="690" r="17" fill="#c8402e"></circle><text x="90" y="696" fill="#ffffff">一</text>
+<circle cx="220" cy="500" r="16" fill="#0b0b0d" stroke="#f1e9da" stroke-width="1.5"></circle><text x="220" y="506" fill="#f1e9da">二</text>
+<circle cx="330" cy="330" r="16" fill="#0b0b0d" stroke="#f1e9da" stroke-width="1.5"></circle><text x="330" y="336" fill="#f1e9da">三</text>
+<circle cx="510" cy="130" r="17" fill="#c8402e"></circle><text x="510" y="136" fill="#ffffff">四</text>
+</g>
+</svg>
+<p class="serif" style="position: absolute; right: 32px; bottom: 26px; margin: 0; font-style: italic; font-size: 24px; color: #f1e9da">Into the lanes</p>
+</div>
+<div class="rv2" style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 26px; padding: 8px 0 0 16px">
+<h2 class="serif" style="margin: 0; font-weight: 300; font-size: clamp(44px, 5vw, 80px); line-height: .95">Shinjuku<br>Night Walk</h2>
+<p style="margin: 0; color: #cfc8ba">How Shinjuku's tiny bars and izakaya really work — the cover charge, the small dish, how to order and how to read the room. At the end you choose a place and step inside on your own, confident.</p>
+<div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(236,230,218,.25)">
+<div style="padding: 16px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Duration</p><p class="serif" style="margin: 2px 0 0; font-size: 24px; line-height: 1.25">About 90 min</p></div>
+<div style="padding: 16px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Group</p><p class="serif" style="margin: 2px 0 0; font-size: 24px; line-height: 1.25">Max 4 guests</p></div>
+<div style="padding: 16px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Meeting</p><p class="serif" style="margin: 2px 0 0; font-size: 24px; line-height: 1.25">Near Shinjuku Stn.</p></div>
+<div style="padding: 16px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Price</p><p class="serif" style="margin: 2px 0 0; font-size: 24px; line-height: 1.25">Shown at booking</p></div>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 16px"><span class="mincho" style="color: #e2644f; width: 22px; flex: none">一</span><span>Meet near the station and get the lay of the land.</span></li>
+<li style="display: flex; gap: 16px"><span class="mincho" style="color: #e2644f; width: 22px; flex: none">二</span><span>Walk the lanes and hear how they came to be.</span></li>
+<li style="display: flex; gap: 16px"><span class="mincho" style="color: #e2644f; width: 22px; flex: none">三</span><span>Practise ordering and asking about charges.</span></li>
+<li style="display: flex; gap: 16px"><span class="mincho" style="color: #e2644f; width: 22px; flex: none">四</span><span>Pick your own bar — and duck through the curtain.</span></li>
+</ol>
+<p class="mut" style="margin: 0; font-size: 13px">The fee covers guiding only. Food and drinks are ordered and paid by guests at each place.</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto">
+<a class="pill cap" data-link="tourBooking" href="#" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; background: #c8402e; color: #ffffff; text-decoration: none; border-radius: 999px">Check dates &amp; book →</a>
+<a class="pill ghost cap" data-link="instagram" href="#" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; border: 1px solid rgba(236,230,218,.55); text-decoration: none; border-radius: 999px">Ask a question</a>
+</div>
+<p class="mut" data-pending="tourBooking" style="margin: -12px 0 0; font-size: 13px">Booking opens soon — send a message on Instagram to be notified.</p>
+</div>
+</div>
+<div class="grid12 rv" style="margin-top: 56px">
+<div style="grid-column: 1 / span 6; border-top: 1px solid rgba(236,230,218,.25); padding-top: 22px"><p class="cap mut" style="margin: 0">Private · On request</p><p class="serif" style="margin: 6px 0 8px; font-size: 30px">Your own walk</p><p style="margin: 0; color: #cfc8ba">Family or friends? Tell me what you're curious about — history, manners, food culture — and we'll shape a walk around it. <a class="lnk" data-link="instagram" href="#" style="color: #ece6da">Send a request →</a></p></div>
+<div style="grid-column: 7 / span 6; border-top: 1px solid rgba(236,230,218,.25); padding-top: 22px"><p class="cap mut" style="margin: 0">Before you arrive</p><p class="serif" style="margin: 6px 0 8px; font-size: 30px">Not visiting yet?</p><p style="margin: 0; color: #cfc8ba">Start with the stories and the manners above. When you land, you'll already know the why. <a class="lnk" href="#stories" style="color: #ece6da">Read first →</a></p></div>
+</div>
+</div>
 </section>
 
 <!-- LESSONS -->
-<section id="lessons">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="sec-num">肆</span>
-      <div>
-        <p class="eyebrow">Learn to speak</p>
-        <h2>Japanese for real moments.</h2>
-      </div>
-    </div>
-    <div class="lessons">
-      <div class="lesson-mark rv"><span>話</span><small>hanasu · to speak</small></div>
-      <div class="rv">
-        <p>Not exam drills — the Japanese you actually use. Ordering at a café, asking for directions, chatting about anime with a new friend. Lessons are online, one-on-one, and made for beginners.</p>
-        <ul class="checks">
-          <li>Natural, everyday Japanese from a native speaker</li>
-          <li>For complete beginners up to early intermediate</li>
-          <li>Pop culture and travel situations built in</li>
-          <li>A patient teacher who is learning languages too</li>
-        </ul>
-        <a class="btn solid" data-link="lessons" href="#" target="_blank" rel="noopener">Visit the lesson site <span class="arr">↗</span></a>
-      </div>
-    </div>
-  </div>
+<section id="lessons" style="border-top: 1px solid rgba(236,230,218,.14); padding: 140px 0; position: relative; overflow: hidden">
+<p class="mincho hide-m" aria-hidden="true" style="position: absolute; right: -30px; top: 40px; margin: 0; font-size: 340px; line-height: 1; font-weight: 800; color: transparent; -webkit-text-stroke: 1px rgba(236,230,218,.12)">ことば</p>
+<div class="wrap grid12" style="position: relative">
+<p class="cap rv" style="grid-column: 1 / span 3; margin: 0; color: #e2644f">肆 · Japanese</p>
+<div class="rv" style="grid-column: 4 / span 7; display: flex; flex-direction: column; gap: 24px">
+<h2 class="serif" style="margin: 0; font-weight: 300; font-size: clamp(40px, 5vw, 76px); line-height: 1">Learn the words<br>for the real moments.</h2>
+<p style="margin: 0; color: #cfc8ba; max-width: 560px">One-to-one online lessons built around situations you will actually meet — ordering, asking, thanking, small talk at the counter. Lessons live on their own site.</p>
+<div style="display: flex; gap: 40px; flex-wrap: wrap">
+<div><p class="mincho" style="margin: 0; font-size: 30px">すみません</p><p class="cap mut" style="margin: 4px 0 0">Excuse me · Sorry · Thanks</p></div>
+<div><p class="mincho" style="margin: 0; font-size: 30px">おすすめは？</p><p class="cap mut" style="margin: 4px 0 0">What do you recommend?</p></div>
+<div><p class="mincho" style="margin: 0; font-size: 30px">ごちそうさまでした</p><p class="cap mut" style="margin: 4px 0 0">Thank you for the meal</p></div>
+</div>
+<a class="pill ghost cap" data-link="lessons" href="https://www.koyojapans.com" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; border: 1px solid rgba(236,230,218,.55); text-decoration: none; border-radius: 999px">Visit koyojapans.com ↗</a>
+</div>
+</div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="tours-bg">
-  <div class="wrap about">
-    <div class="tategaki rv" aria-hidden="true">案内人<small>— the guide</small></div>
-    <div class="rv">
-      <p class="eyebrow">About</p>
-      <blockquote>“I grew up taking these customs for granted. Travelling abroad taught me how strange — and how beautiful — they look from the outside.”</blockquote>
-      <p>I'm Koyo, born and raised in Japan. After backpacking and living overseas, I started noticing the questions visitors kept asking: <i>Why is it so quiet? Why the small dish? Am I allowed in here?</i></p>
-      <p>This is where I answer them — through short stories, walks around Tokyo, and Japanese lessons. I'm also learning five languages myself, so I know how it feels to be the one trying to understand.</p>
-    </div>
-  </div>
+<section id="about" style="border-top: 1px solid rgba(236,230,218,.14); padding: 130px 0">
+<div class="wrap grid12">
+<div class="rv" style="grid-column: 1 / span 3"><p class="cap" style="margin: 0; color: #e2644f">案内人 · The guide</p></div>
+<div class="rv" style="grid-column: 4 / span 7; display: flex; flex-direction: column; gap: 22px">
+<blockquote class="serif" style="margin: 0; font-weight: 300; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.2">“I grew up taking these customs for granted. Travelling abroad taught me how strange — and how beautiful — they look from the outside.”</blockquote>
+<p style="margin: 0; color: #cfc8ba; max-width: 620px">I'm Koyo, born and raised in Japan. After backpacking and living overseas, I started noticing the questions visitors kept asking: <i>Why is it so quiet? Why the small dish? Am I allowed in here?</i></p>
+<p style="margin: 0; color: #cfc8ba; max-width: 620px">This is where I answer them — through short stories, walks around Tokyo, and Japanese lessons. I'm also learning five languages myself, so I know how it feels to be the one trying to understand.</p>
+</div>
+</div>
 </section>
 
 <!-- FAQ -->
-<section class="faq">
-  <div class="wrap" style="max-width:860px">
-    <div class="sec-head rv" style="grid-template-columns:1fr">
-      <div><p class="eyebrow">Questions</p><h2>Good to know</h2></div>
-    </div>
-    <details class="rv"><summary>Do I need to speak Japanese for the tour?</summary><p>Not at all. Tours are in English, and you'll pick up a few useful phrases along the way.</p></details>
-    <details class="rv"><summary>What does the tour fee include?</summary><p>The fee covers guiding. Food, drinks and any transport are paid by guests directly, so you only pay for what you choose.</p></details>
-    <details class="rv"><summary>Is the night walk suitable if I don't drink alcohol?</summary><p>Yes. Many places serve soft drinks and food, and the focus of the walk is on how the area works and how to feel at home in it.</p></details>
-    <details class="rv"><summary>How do I book or pay?</summary><p>Booking and payment are handled through the booking page linked above. If it isn't open yet, send a message on Instagram and you'll be the first to hear.</p></details>
-  </div>
+<section id="faq" style="background: #121215; padding: 130px 0">
+<div class="wrap grid12">
+<div class="rv" style="grid-column: 1 / span 4"><p class="cap" style="margin: 0 0 14px; color: #e2644f">伍 · Good to know</p><h2 class="serif" style="margin: 0; font-weight: 300; font-size: clamp(36px, 4vw, 60px); line-height: 1">Questions, answered.</h2></div>
+<div class="rv2" style="grid-column: 6 / span 7; border-top: 1px solid rgba(236,230,218,.2)">
+
+<details style="border-bottom: 1px solid rgba(236,230,218,.2)">
+<summary style="display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 24px 0"><span class="serif" style="font-size: 25px; line-height: 1.2">Do I need to speak Japanese for the tour?</span><span class="plus" aria-hidden="true" style="font-size: 26px; color: #e2644f; flex: none">+</span></summary>
+<p style="margin: 0 0 26px; color: #cfc8ba; max-width: 620px">Not at all. Tours are in English, and you'll pick up a few useful phrases along the way.</p>
+</details>
+
+<details style="border-bottom: 1px solid rgba(236,230,218,.2)">
+<summary style="display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 24px 0"><span class="serif" style="font-size: 25px; line-height: 1.2">What does the tour fee include?</span><span class="plus" aria-hidden="true" style="font-size: 26px; color: #e2644f; flex: none">+</span></summary>
+<p style="margin: 0 0 26px; color: #cfc8ba; max-width: 620px">Guiding only. Food, drinks and any transport are paid by guests directly, so you only pay for what you choose.</p>
+</details>
+
+<details style="border-bottom: 1px solid rgba(236,230,218,.2)">
+<summary style="display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 24px 0"><span class="serif" style="font-size: 25px; line-height: 1.2">Is the night walk okay if I don't drink?</span><span class="plus" aria-hidden="true" style="font-size: 26px; color: #e2644f; flex: none">+</span></summary>
+<p style="margin: 0 0 26px; color: #cfc8ba; max-width: 620px">Yes. Many places serve soft drinks and food, and the walk is about how the area works and how to feel at home in it.</p>
+</details>
+
+<details style="border-bottom: 1px solid rgba(236,230,218,.2)">
+<summary style="display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 24px 0"><span class="serif" style="font-size: 25px; line-height: 1.2">How do I book or pay?</span><span class="plus" aria-hidden="true" style="font-size: 26px; color: #e2644f; flex: none">+</span></summary>
+<p style="margin: 0 0 26px; color: #cfc8ba; max-width: 620px">Through the booking page. If it isn't open yet, send a message on Instagram and you'll be the first to hear.</p>
+</details>
+
+</div>
+</div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
-  <div class="wrap rv">
-    <span class="seal" style="width:56px;height:56px;font-size:1.6rem;margin:0 auto">縁</span>
-    <h2>Let's meet in Japan.</h2>
-    <p style="max-width:32em;margin:0 auto">Questions about a tour, a lesson, or a custom you saw? Send a message — every one gets a reply.</p>
-    <div class="ctas">
-      <a class="btn solid" data-link="instagram" href="#">Message on Instagram <span class="arr">→</span></a>
-      <a class="btn" data-link="email" href="#">Email</a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="wrap foot">
-    <span>© <span id="yr"></span> Koyo Japan</span>
-    <span><a data-link="instagram" href="#">Instagram</a><a data-link="lessons" href="#" target="_blank" rel="noopener">Japanese Lessons</a><a href="#tours">Tours</a></span>
-  </div>
+<!-- CLOSING -->
+<section style="position: relative; overflow: hidden; padding: 170px 0 0">
+<img src="img/alley-red-lanterns-wide.jpg" alt="" aria-hidden="true" style="position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px); object-fit: cover; object-position: 70% 50%; filter: blur(10px) brightness(.55)">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, #121215 0%, rgba(11,11,13,.35) 35%, rgba(11,11,13,.6) 70%, #0b0b0d 100%)"></div>
+<div class="wrap rv" style="position: relative; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px">
+<p class="cap" style="margin: 0; color: #e2644f">結 · One time, one meeting</p>
+<h2 class="serif" style="margin: 0; font-weight: 300; font-size: clamp(52px, 8vw, 128px); line-height: .95">Let's meet<br>in <em style="color: #e2644f">Japan.</em></h2>
+<p style="margin: 0; color: #d8d1c3; max-width: 520px">A tour, a lesson, or a custom you saw and couldn't explain — send a message. Every one gets a reply.</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 8px">
+<a class="pill cap" data-link="instagram" href="#" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; background: #c8402e; color: #ffffff; text-decoration: none; border-radius: 999px">Message on Instagram →</a>
+<a class="pill ghost cap" data-link="email" href="#" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; border: 1px solid rgba(236,230,218,.6); text-decoration: none; border-radius: 999px">Email</a>
+</div>
+</div>
+<footer class="wrap" style="position: relative; margin-top: 150px; padding-bottom: 28px">
+<p class="serif" aria-hidden="true" style="margin: 0; font-weight: 300; font-size: clamp(72px, 20.5vw, 312px); line-height: .8; letter-spacing: -.02em; white-space: nowrap; color: rgba(236,230,218,.92)">Koyo Japan</p>
+<div style="margin-top: 26px; padding-top: 18px; border-top: 1px solid rgba(236,230,218,.18); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #9d968a">
+<span>© <span id="yr">2026</span> Koyo Japan · Photos: Unsplash</span>
+<span style="display: flex; gap: 24px; flex-wrap: wrap"><a class="lnk" data-link="instagram" href="#">Instagram</a><a class="lnk" data-link="lessons" href="https://www.koyojapans.com">Japanese lessons</a><a class="lnk" href="#walk">The walk</a></span>
+</div>
 </footer>
+</section>
 
+</div>
 <script>
 /* ===== LINKS — edit only this block =====
-   Leave a value empty ("") and its button stays hidden-safe (shows the "coming soon" note). */
+   Leave a value empty ("") and its button shows as "coming soon". */
 const LINKS = {
-  instagram:   "https://www.instagram.com/senseijapan.jissen/", // e.g. "https://www.instagram.com/your_handle/"
+  instagram:   "https://www.instagram.com/senseijapan.jissen/",
   tourBooking: "",                              // booking/payment page for the Shinjuku Night Walk
-  lessons:     "https://www.koyojapans.com",    // existing Japanese lesson site
+  lessons:     "https://www.koyojapans.com",    // Japanese lesson site
   email:       ""                               // e.g. "mailto:hello@example.com"
 };
 document.querySelectorAll('[data-link]').forEach(a=>{
   const url = LINKS[a.dataset.link];
   if(url){ a.href = url; if(/^https?:/.test(url)){a.target="_blank";a.rel="noopener";} }
-  else { a.removeAttribute('href'); a.style.opacity=.45; a.style.cursor='default'; a.title='Coming soon'; }
+  else { a.removeAttribute('href'); a.setAttribute('aria-disabled','true'); a.style.opacity=.45; a.style.cursor='default'; a.title='Coming soon'; }
 });
 document.querySelectorAll('[data-pending]').forEach(p=>{ if(LINKS[p.dataset.pending]) p.remove(); });
 document.getElementById('yr').textContent = new Date().getFullYear();
-/* reveal on scroll */
-const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
