@@ -835,7 +835,6 @@
       <p data-i18n="pri_sub">Try a lesson risk-free, then choose single sessions or a discounted bundle.</p>
     </div>
     <div class="prices">
-      <!-- Stripe Payment Links: 公開手順.md Phase 7 参照。作成後 href を差し替え -->
       <div class="price">
         <h3 data-i18n="prT_t">Free Trial</h3>
         <div class="amount">Free<span data-i18n="prT_per"> / 20 min</span></div>
@@ -858,7 +857,7 @@
           <li data-i18n="prL_b">Custom materials after each lesson</li>
           <li data-i18n="prL_c">Chat support for quick questions</li>
         </ul>
-        <a href="https://buy.stripe.com/dRm4gAgypcMQ0TZ7Zsew803" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="pr_btn">Choose</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="pr_btn">Apply by email</a>
       </div>
       <div class="price pop">
         <div class="badge" data-i18n="pri_badge">Most popular</div>
@@ -872,7 +871,7 @@
           <li data-i18n="prS_c">Personalized curriculum</li>
           <li data-i18n="prS_d2">Priority chat support</li>
         </ul>
-        <a href="https://buy.stripe.com/3cI7sM6XP7sw0TZ0x0ew802" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="pr_btn2">Book now</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="pr_btn2">Apply by email</a>
       </div>
       <div class="price">
         <h3 data-i18n="prI_t">Intensive</h3>
@@ -885,10 +884,10 @@
           <li data-i18n="prI_c">Daily chat Q&amp;A between lessons</li>
           <li data-i18n="prI_d2">Progress reviews</li>
         </ul>
-        <a href="https://buy.stripe.com/bJe28s6XP4gk1Y3frUew801" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="pr_btn">Choose</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="pr_btn">Apply by email</a>
       </div>
     </div>
-    <p class="note"><a href="https://buy.stripe.com/eVqfZi5TL7swbyDbbEew800" target="_blank" rel="noopener" data-i18n="pr_payg">Prefer to pay as you go? Single 50-min lesson — $36 (≈¥5,800), no subscription.</a></p>
+    <p class="note"><a href="#contact" data-i18n="pr_payg">Prefer to pay as you go? Single 50-min lesson — $36 (≈¥5,800), no subscription.</a></p>
     <p class="note" data-i18n="pri_note">Prices in USD (¥ shown at approximate rates). Save 10% when you pay yearly. Lessons online via Zoom or Google Meet.</p>
   </div>
 </section>
@@ -1081,8 +1080,8 @@ const I18N = {
     prI_d2:"Progress reviews",
     pr_per:" / mo",
     pr_btn_try:"Start free",
-    pr_btn:"Choose",
-    pr_btn2:"Book now",
+    pr_btn:"Apply by email",
+    pr_btn2:"Apply by email",
     pr_payg:"Prefer to pay as you go? Single 50-min lesson — $36 (≈¥5,800), no subscription.",
     pri_note:"Prices in USD (¥ shown at approximate rates). Save 10% when you pay yearly. Lessons online via Zoom or Google Meet.",
     book_eyebrow:"Booking",
@@ -1373,8 +1372,8 @@ const I18N = {
     prI_d2:"進捗レビュー",
     pr_per:" / 月",
     pr_btn_try:"無料で始める",
-    pr_btn:"選ぶ",
-    pr_btn2:"今すぐ予約",
+    pr_btn:"メールで申し込む",
+    pr_btn2:"メールで申し込む",
     pr_payg:"単発がいい？ 50分レッスン1回 — $36（約¥5,800）、サブスク不要。",
     pri_note:"料金はUSD表示（¥は概算レート）。年払いで10%オフ。レッスンはZoomまたはGoogle Meetでオンライン。",
     book_eyebrow:"予約",
@@ -1665,8 +1664,8 @@ const I18N = {
     prI_d2:"진도 리뷰",
     pr_per:" / 월",
     pr_btn_try:"무료로 시작",
-    pr_btn:"선택",
-    pr_btn2:"지금 예약",
+    pr_btn:"이메일로 신청",
+    pr_btn2:"이메일로 신청",
     pr_payg:"매달은 부담되나요? 단발 50분 레슨 — $36 (≈¥5,800), 구독 없음.",
     pri_note:"요금은 USD 기준 (¥는 대략적 환율). 연간 결제 시 10% 할인. 레슨은 Zoom 또는 Google Meet로 온라인 진행.",
     book_eyebrow:"예약",
@@ -1957,8 +1956,8 @@ const I18N = {
     prI_d2:"Revisiones de progreso",
     pr_per:" / mes",
     pr_btn_try:"Empezar gratis",
-    pr_btn:"Elegir",
-    pr_btn2:"Reservar",
+    pr_btn:"Solicitar por correo",
+    pr_btn2:"Solicitar por correo",
     pr_payg:"¿Prefieres pagar por clase? Clase suelta de 50 min — $36 (≈¥5,800), sin suscripción.",
     pri_note:"Precios en USD (¥ a tipos aproximados). Ahorra 10% pagando al año. Clases online por Zoom o Google Meet.",
     book_eyebrow:"Reservas",
@@ -2249,8 +2248,8 @@ const I18N = {
     prI_d2:"Bilans de progression",
     pr_per:" / mois",
     pr_btn_try:"Commencer gratuitement",
-    pr_btn:"Choisir",
-    pr_btn2:"Réserver",
+    pr_btn:"Demander par e-mail",
+    pr_btn2:"Demander par e-mail",
     pr_payg:"Tu préfères payer à la séance ? Cours unique de 50 min — $36 (≈¥5,800), sans abonnement.",
     pri_note:'Prix en USD (¥ à titre indicatif). Économise 10% en payant à l\'année. Cours en ligne via Zoom ou Google Meet.',
     book_eyebrow:"Réservation",
