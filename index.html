@@ -887,6 +887,7 @@
       </div>
     </div>
     <p class="note"><a href="#contact" data-i18n="pr_payg">Prefer to pay as you go? Single 50-min lesson — $36 (≈¥5,800), no subscription.</a></p>
+    <p class="note" data-i18n="pri_pay">How to pay: send me a message by email or the form, and I'll reply with a secure Stripe payment link. Not sure which plan fits? Start with the free 20-minute Zoom call — we'll check your level and choose a plan together.</p>
     <p class="note" data-i18n="pri_note">Prices in USD (¥ shown at approximate rates). Save 10% when you pay yearly. Lessons online via Zoom or Google Meet.</p>
   </div>
 </section>
@@ -966,6 +967,7 @@
       </div>
       <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center" data-i18n="f_send">Send message</button>
       <p class="note" data-i18n="f_note" style="margin-top:14px">This form uses Formspree — replace the form ID with your own to receive messages.</p>
+      <p class="note" data-i18n="f_privacy" style="margin-top:6px">By sending, you agree to our <a href="/privacy/">Privacy Policy</a> (messages are delivered via Formspree, USA).</p>
     </form>
   </div>
 </section>
@@ -979,6 +981,8 @@
       <a href="#personalize" data-i18n="nav_personalize">Personalize</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
       <a href="#booking" data-i18n="nav_booking">Book</a>
+      <a href="/legal/" data-i18n="foot_legal">Legal notice</a>
+      <a href="/privacy/" data-i18n="foot_privacy">Privacy</a>
     </div>
   </div>
   <div class="foot" style="margin-top:18px;opacity:.6;font-size:.82rem">© <span id="year"></span> Sensei Japan. <span data-i18n="foot_tag">Learn Japanese, the human way.</span></div>
@@ -1080,6 +1084,7 @@ const I18N = {
     pr_btn:"Apply by email",
     pr_btn2:"Apply by email",
     pr_payg:"Prefer to pay as you go? Single 50-min lesson — $36 (≈¥5,800), no subscription.",
+    pri_pay:"How to pay: send me a message by email or the form, and I'll reply with a secure Stripe payment link. Not sure which plan fits? Start with the free 20-minute Zoom call — we'll check your level and choose a plan together.",
     pri_note:"Prices in USD (¥ shown at approximate rates). Save 10% when you pay yearly. Lessons online via Zoom or Google Meet.",
     book_eyebrow:"Booking",
     book_title:"Request a time that works for you.",
@@ -1107,6 +1112,9 @@ const I18N = {
     f_msg_ph:"Tell me your level, goals, and a few times that work for you (with your time zone)...",
     f_send:"Send message",
     f_note:"Your message goes straight to my inbox — I'll get back to you personally.",
+    f_privacy:"By sending, you agree to our <a href=\"/privacy/\">Privacy Policy</a> (messages are delivered via Formspree, USA).",
+    foot_legal:"Legal notice",
+    foot_privacy:"Privacy",
     foot_tag:"Japanese learning, human warmth + smart tools.",
     promo_banner:"Modern learning — <em>native conversation</em> plus <em>AI that adapts to you</em>, not a one-size-fits-all app.",
     pers_eyebrow:"100% personalized",
@@ -1371,6 +1379,7 @@ const I18N = {
     pr_btn:"メールで申し込む",
     pr_btn2:"メールで申し込む",
     pr_payg:"単発がいい？ 50分レッスン1回 — $36（約¥5,800）、サブスク不要。",
+    pri_pay:"お支払い方法: メールかフォームでご連絡いただければ、Stripe の支払いリンクをお送りします。どのプランがいいか迷ったら、無料の20分 Zoom から始められます。レベルを確認しながら、一緒にプランを決めましょう。",
     pri_note:"料金はUSD表示（¥は概算レート）。年払いで10%オフ。レッスンはZoomまたはGoogle Meetでオンライン。",
     book_eyebrow:"予約",
     book_title:"ご都合のいい時間をお知らせください。",
@@ -1398,6 +1407,9 @@ const I18N = {
     f_msg_ph:"レベル・目標・ご都合のいい日時(タイムゾーンも)を教えてください…",
     f_send:"メッセージを送る",
     f_note:"メッセージは直接私に届きます——ご本人に返信します。",
+    f_privacy:"送信すると、<a href=\"/privacy/\">プライバシーポリシー</a>に同意したものとします(メッセージは米国の Formspree 経由で届きます)。",
+    foot_legal:"特定商取引法に基づく表記",
+    foot_privacy:"プライバシーポリシー",
     foot_tag:"人の温度とスマートなツールで学ぶ日本語。",
     promo_banner:"現代の学び方——<em>ネイティブとの会話</em>に<em>あなたに合わせるAI</em>。画一的なアプリではありません。",
     pers_eyebrow:"100%パーソナライズ",
@@ -1662,6 +1674,7 @@ const I18N = {
     pr_btn:"이메일로 신청",
     pr_btn2:"이메일로 신청",
     pr_payg:"매달은 부담되나요? 단발 50분 레슨 — $36 (≈¥5,800), 구독 없음.",
+    pri_pay:"결제 방법: 이메일이나 폼으로 연락 주시면 Stripe 결제 링크를 보내드려요. 어떤 플랜이 맞을지 고민된다면 무료 20분 Zoom부터 시작할 수 있어요. 수준을 확인하면서 함께 플랜을 정해요.",
     pri_note:"요금은 USD 기준 (¥는 대략적 환율). 연간 결제 시 10% 할인. 레슨은 Zoom 또는 Google Meet로 온라인 진행.",
     book_eyebrow:"예약",
     book_title:"편한 시간을 알려주세요.",
@@ -1689,6 +1702,9 @@ const I18N = {
     f_msg_ph:"수준, 목표, 가능한 시간(시간대 포함)을 알려주세요...",
     f_send:"메시지 보내기",
     f_note:"메시지는 저에게 바로 전달됩니다 — 제가 직접 답장 드릴게요.",
+    f_privacy:"보내시면 <a href=\"/privacy/\">개인정보 처리방침</a>에 동의한 것으로 봅니다(메시지는 미국의 Formspree를 거쳐 전달돼요).",
+    foot_legal:"특정상거래법 표기",
+    foot_privacy:"개인정보 처리방침",
     foot_tag:"사람의 온기 + 스마트한 도구로 배우는 일본어.",
     promo_banner:"현대적인 학습 — <em>원어민과의 대화</em>에 <em>당신에게 맞추는 AI</em>. 획일적인 앱이 아닙니다.",
     pers_eyebrow:"100% 맞춤형",
@@ -1953,6 +1969,7 @@ const I18N = {
     pr_btn:"Solicitar por correo",
     pr_btn2:"Solicitar por correo",
     pr_payg:"¿Prefieres pagar por clase? Clase suelta de 50 min — $36 (≈¥5,800), sin suscripción.",
+    pri_pay:"Cómo pagar: escríbeme por email o por el formulario y te envío un enlace de pago seguro de Stripe. ¿No sabes qué plan elegir? Empieza con la llamada gratis de 20 minutos por Zoom: vemos tu nivel y elegimos el plan juntos.",
     pri_note:"Precios en USD (¥ a tipos aproximados). Ahorra 10% pagando al año. Clases online por Zoom o Google Meet.",
     book_eyebrow:"Reservas",
     book_title:"Dime qué horario te viene bien.",
@@ -1980,6 +1997,9 @@ const I18N = {
     f_msg_ph:"Cuéntame tu nivel, tus metas y algunos horarios posibles (con tu zona horaria)...",
     f_send:"Enviar mensaje",
     f_note:"Tu mensaje llega directamente a mi bandeja de entrada — te responderé personalmente.",
+    f_privacy:"Al enviar, aceptas nuestra <a href=\"/privacy/\">Política de privacidad</a> (los mensajes llegan a través de Formspree, EE. UU.).",
+    foot_legal:"Aviso legal",
+    foot_privacy:"Privacidad",
     foot_tag:"Aprender japonés, calidez humana + herramientas inteligentes.",
     promo_banner:"Aprendizaje moderno — <em>conversación nativa</em> más <em>IA que se adapta a ti</em>, no una app igual para todos.",
     pers_eyebrow:"100% personalizado",
@@ -2244,6 +2264,7 @@ const I18N = {
     pr_btn:"Demander par e-mail",
     pr_btn2:"Demander par e-mail",
     pr_payg:"Tu préfères payer à la séance ? Cours unique de 50 min — $36 (≈¥5,800), sans abonnement.",
+    pri_pay:"Comment payer : écris-moi par e-mail ou via le formulaire, et je t'envoie un lien de paiement sécurisé Stripe. Tu hésites entre les plans ? Commence par l'appel Zoom gratuit de 20 minutes : on vérifie ton niveau et on choisit ensemble.",
     pri_note:'Prix en USD (¥ à titre indicatif). Économise 10% en payant à l\'année. Cours en ligne via Zoom ou Google Meet.',
     book_eyebrow:"Réservation",
     book_title:"Dis-moi quels créneaux te conviennent.",
@@ -2271,6 +2292,9 @@ const I18N = {
     f_msg_ph:"Dis-moi ton niveau, tes objectifs et quelques créneaux possibles (avec ton fuseau horaire)...",
     f_send:"Envoyer le message",
     f_note:"Votre message arrive directement dans ma boîte de réception — je vous répondrai personnellement.",
+    f_privacy:"En envoyant, tu acceptes notre <a href=\"/privacy/\">politique de confidentialité</a> (les messages passent par Formspree, aux États-Unis).",
+    foot_legal:"Mentions légales",
+    foot_privacy:"Confidentialité",
     foot_tag:"Apprendre le japonais, chaleur humaine + outils intelligents.",
     promo_banner:'Un apprentissage moderne — <em>conversation avec un natif</em> plus <em>une IA qui s\'adapte à toi</em>, pas une appli passe-partout.',
     pers_eyebrow:"100% personnalisé",
