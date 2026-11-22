@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sensei Japan — Japan makes sense once you know why</title>
-<meta name="description" content="Short stories behind everyday Japan, six manners that make your trip smoother, a small-group Shinjuku Night Walk, and Japanese lessons — from a Tokyo local.">
+<meta name="description" content="Short stories behind everyday Japan, six manners that make your trip smoother, small-group walks in sixteen Tokyo neighbourhoods, and Japanese lessons — from a Tokyo local.">
 <link rel="canonical" href="https://www.koyojapans.com/japan/">
 <meta name="theme-color" content="#0b0b0d">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sensei Japan — Japan makes sense once you know why">
-<meta property="og:description" content="Short stories behind everyday Japan, six manners that make your trip smoother, a small-group Shinjuku Night Walk, and Japanese lessons — from a Tokyo local.">
+<meta property="og:description" content="Short stories behind everyday Japan, six manners that make your trip smoother, small-group walks in sixteen Tokyo neighbourhoods, and Japanese lessons — from a Tokyo local.">
 <meta property="og:url" content="https://www.koyojapans.com/japan/">
 <meta property="og:image" content="https://www.koyojapans.com/japan/img/shinjuku-alley-night.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -113,6 +113,49 @@ a{color:inherit}
 .note{position:absolute;z-index:6;width:170px;margin:0;font-size:13px;line-height:1.5;color:#a8a194}
 .note .cap{display:block;margin-bottom:6px;font-size:10px}
 .glow{position:absolute;left:50%;top:40px;width:1200px;height:760px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 46%,rgba(255,178,96,.3),rgba(200,64,46,.14) 40%,rgba(11,11,13,0) 68%);pointer-events:none}
+/* walks map */
+.mapbox{border:1px solid rgba(236,230,218,.16);background:#121215;line-height:0}
+.mapbox svg{display:block;width:100%;height:auto}
+.pin{cursor:pointer;outline:none}
+.pin{transition:opacity .35s ease}
+.pin .ring{fill:#0b0b0d;stroke:var(--c);stroke-width:2.5;transition:fill .3s ease,stroke .3s ease,stroke-width .3s ease}
+.pin .dot{fill:var(--c);transition:fill .3s ease}
+.pin text{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;fill:#d8d1c3;paint-order:stroke;stroke:#121215;stroke-width:7px;stroke-linejoin:round;transition:fill .3s ease}
+.pin:hover .ring,.pin:focus-visible .ring{stroke-width:4}
+.pin:hover text,.pin:focus-visible text{fill:#ffffff}
+.pin:focus-visible .ring{stroke-width:4}
+.pin.on .ring{fill:var(--c);stroke:var(--c)}
+.pin.on .dot{fill:#0b0b0d}
+.pin.on text{fill:#ffffff;font-weight:600}
+.pin .pulse{fill:none;stroke:var(--c);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+.pin.on .pulse{animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(.9);opacity:.9}to{transform:scale(2.6);opacity:0}}
+.chip,.seg button{font:500 13px/1 Inter,system-ui,sans-serif;color:#d8d1c3;background:transparent;border:1px solid rgba(236,230,218,.3);border-radius:999px;padding:10px 14px;cursor:pointer;transition:background .3s ease,color .3s ease,border-color .3s ease}
+.chip:hover,.seg button:hover{border-color:#ece6da;color:#ffffff}
+.seg button[aria-pressed="true"]{background:#c8402e;border-color:#c8402e;color:#ffffff}
+.chip{font-size:12px;padding:8px 12px}
+.chip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#0b0b0d}
+#walkMap.dim .pin:not(.hl):not(.on){opacity:.22}
+#halo{transition:transform .7s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+#halo .hfill{fill:var(--c);opacity:.12}
+#halo .hring{fill:none;stroke:var(--c);stroke-opacity:.6;stroke-width:1.5;stroke-dasharray:4 7;transform-box:fill-box;transform-origin:center;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.trow{display:grid;grid-template-columns:236px minmax(0,1fr);gap:12px;align-items:center;padding:10px 0;border-top:1px solid rgba(236,230,218,.1)}
+.tname{display:flex;align-items:center;gap:10px;color:#cfc8ba;font-size:10px;white-space:nowrap}
+.tname .jp{font-family:'Shippori Mincho',serif;letter-spacing:.1em;text-transform:none;color:#9d968a;font-size:12px}
+.tdot{width:10px;height:10px;border-radius:50%;background:var(--c);flex:none}
+.tbtns{display:flex;flex-wrap:wrap;gap:6px}
+.pager{display:flex;align-items:center;gap:10px;flex:none}
+.pager button{width:40px;height:40px;border-radius:50%;border:1px solid rgba(236,230,218,.3);background:transparent;color:#ece6da;font:16px/1 Inter,system-ui,sans-serif;cursor:pointer;transition:background .3s ease,color .3s ease}
+.pager button:hover{background:#ece6da;color:#0b0b0d}
+.pager button:focus-visible{outline:2px solid var(--acct);outline-offset:3px}
+.areapanel.swap .sw{animation:sw .55s cubic-bezier(.2,.8,.2,1) both}
+.areapanel.swap #apKanji{animation-delay:.04s}.areapanel.swap #apDesc{animation-delay:.08s}.areapanel.swap #apStops{animation-delay:.12s}
+@keyframes sw{from{opacity:0;transform:translateY(12px)}}
+.chip:focus-visible,.seg button:focus-visible{outline:2px solid var(--acct);outline-offset:3px}
+.seg{display:inline-flex;gap:8px}
+.seg button{min-height:46px;padding:0 24px;font-size:14px}
+.areapanel{position:sticky;top:24px}
 /* links + pills */
 .lnk{text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .4s ease}
 .lnk:hover{background-size:100% 1px}
@@ -146,10 +189,10 @@ details[open] .plus{transform:rotate(45deg)}
 .v2:not(.still) .glow{animation:glow linear both;animation-timeline:view();animation-range:cover 10% cover 60%}
 @keyframes glow{from{opacity:.35}}
 }
-.still .hero-img,.still .marq,.still .cue,.still .route,.still .ln>span,.still .fade,.still .stamp,.still .panel,.still .lantern,.still .sign{animation:none}
+.still .pin.on .pulse,.still #halo .hring,.still .hero-img,.still .marq,.still .cue,.still .route,.still .ln>span,.still .fade,.still .stamp,.still .panel,.still .lantern,.still .sign{animation:none}
 .still .route{stroke-dashoffset:0}
 @media (prefers-reduced-motion:reduce){
-.hero-img,.marq,.cue,.route,.ln>span,.fade,.stamp,.panel,.rv,.rv2,.rv3,.fillt,.clipin,.zimg,.half,.glow,.door,.lantern,.sign{animation:none !important}
+.pin .pulse,#halo .hring,.areapanel .sw,.hero-img,.marq,.cue,.route,.ln>span,.fade,.stamp,.panel,.rv,.rv2,.rv3,.fillt,.clipin,.zimg,.half,.glow,.door,.lantern,.sign{animation:none !important}
 .route{stroke-dashoffset:0}
 }
 @media (max-width:900px){
@@ -165,9 +208,11 @@ details[open] .plus{transform:rotate(45deg)}
 .glow{width:560px;height:460px}
 .scene{width:calc(100% + 40px);margin:0 -20px}
 .walk-img{min-height:520px !important}
+.areapanel{position:static}
+.trow{grid-template-columns:minmax(0,1fr);gap:8px}
 }
 </style>
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"Sensei Japan","url":"https://www.koyojapans.com/japan/","description":"Culture, history and manners of Japan explained by a Tokyo local, with a Shinjuku night walk and Japanese lessons.","sameAs":["https://www.instagram.com/senseijapan.jissen/"]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need to speak Japanese for the tour?","acceptedAnswer":{"@type":"Answer","text":"Not at all. Tours are in English, and you'll pick up a few useful phrases along the way."}},{"@type":"Question","name":"What does the tour fee include?","acceptedAnswer":{"@type":"Answer","text":"Guiding only. Food, drinks and any transport are paid by guests directly, so you only pay for what you choose."}},{"@type":"Question","name":"Is the night walk okay if I don't drink?","acceptedAnswer":{"@type":"Answer","text":"Yes. Many places serve soft drinks and food, and the walk is about how the area works and how to feel at home in it."}},{"@type":"Question","name":"How do I book or pay?","acceptedAnswer":{"@type":"Answer","text":"Send a booking request with the form on this page (or email me). I'll reply to confirm the date and details; nothing is charged when you send the request. Payment is by cash (Japanese yen) on the day, or by Wise transfer — I'll send the details by email once the date is confirmed."}}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"Sensei Japan","url":"https://www.koyojapans.com/japan/","description":"Culture, history and manners of Japan explained by a Tokyo local, with small-group neighbourhood walks in Tokyo and Japanese lessons.","sameAs":["https://www.instagram.com/senseijapan.jissen/"]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need to speak Japanese for the tour?","acceptedAnswer":{"@type":"Answer","text":"Not at all. Tours are in English, and you'll pick up a few useful phrases along the way."}},{"@type":"Question","name":"What does the tour fee include?","acceptedAnswer":{"@type":"Answer","text":"Guiding only. Food, drinks and any transport are paid by guests directly, so you only pay for what you choose."}},{"@type":"Question","name":"Which neighbourhood should I choose?","acceptedAnswer":{"@type":"Answer","text":"Choose by what you enjoy: Edo history and rivers, old temple streets, everyday local life, culture and subculture, or the big city. Not sure? Pick “Not sure yet” in the form and tell me what you like, and I'll suggest one."}},{"@type":"Question","name":"How do I book or pay?","acceptedAnswer":{"@type":"Answer","text":"Send a booking request with the form on this page (or email me). I'll reply to confirm the date and details; nothing is charged when you send the request. Payment is by cash (Japanese yen) on the day, or by Wise transfer — I'll send the details by email once the date is confirmed."}}]}]</script>
 </head>
 <body>
 <div class="v2" style="--acc: #c8402e; --acct: #e2644f; background: #0b0b0d; color: #ece6da; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.7; position: relative; overflow: hidden">
@@ -189,10 +234,10 @@ details[open] .plus{transform:rotate(45deg)}
 <div class="nav-links cap" style="display: flex; gap: 36px; color: #c9c2b4">
 <a class="lnk" href="#stories" style="padding: 10px 0">Stories</a>
 <a class="lnk" href="#manners" style="padding: 10px 0">Manners</a>
-<a class="lnk" href="#walk" style="padding: 10px 0">The walk</a>
+<a class="lnk" href="#walk" style="padding: 10px 0">Walks</a>
 <a class="lnk" href="#lessons" style="padding: 10px 0">Japanese</a>
 </div>
-<a class="pill ghost cap navbtn" href="#walk" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; white-space: nowrap; border: 1px solid rgba(236,230,218,.5); border-radius: 999px; text-decoration: none">Book the walk</a>
+<a class="pill ghost cap navbtn" href="#walk" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; white-space: nowrap; border: 1px solid rgba(236,230,218,.5); border-radius: 999px; text-decoration: none">Book a walk</a>
 </nav>
 </header>
 
@@ -215,14 +260,14 @@ details[open] .plus{transform:rotate(45deg)}
 <div class="grid12 fade" style="--d: 1s; margin-top: 48px; align-items: end">
 <p style="grid-column: 1 / span 5; margin: 0; color: #cfc8ba; font-size: 17px; max-width: 520px">Short stories behind everyday Japan — the bows, the silent trains, the six-seat bars of Shinjuku. Read them here, then walk them with me.</p>
 <div style="grid-column: 7 / span 6; display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end">
-<a class="pill cap" href="#walk" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; background: #c8402e; color: #ffffff; text-decoration: none; border-radius: 999px">Shinjuku Night Walk →</a>
+<a class="pill cap" href="#walk" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; background: #c8402e; color: #ffffff; text-decoration: none; border-radius: 999px">Choose a walk →</a>
 <a class="pill ghost cap" href="#stories" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; border: 1px solid rgba(236,230,218,.55); text-decoration: none; border-radius: 999px">Read the stories</a>
 </div>
 </div>
 <div class="hide-m fade" style="--d: 1.3s; margin-top: 52px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; border-top: 1px solid rgba(236,230,218,.18); padding-top: 12px">
 <span class="cap mut" style="white-space: nowrap">35.69° N · 139.70° E</span>
 <nav class="toc cap" aria-label="Contents" style="display: flex; gap: 30px">
-<a href="#stories"><span class="mincho">壱</span>Stories</a><a href="#manners"><span class="mincho">弐</span>Manners</a><a href="#walk"><span class="mincho">参</span>The walk</a><a href="#lessons"><span class="mincho">肆</span>Japanese</a><a href="#faq"><span class="mincho">伍</span>FAQ</a>
+<a href="#stories"><span class="mincho">壱</span>Stories</a><a href="#manners"><span class="mincho">弐</span>Manners</a><a href="#walk"><span class="mincho">参</span>Walks</a><a href="#lessons"><span class="mincho">肆</span>Japanese</a><a href="#faq"><span class="mincho">伍</span>FAQ</a>
 </nav>
 <span style="justify-self: end; display: flex; align-items: center; gap: 14px"><span class="cap mut">Scroll</span><span style="width: 1px; height: 40px; background: rgba(236,230,218,.25); position: relative; overflow: hidden; display: block"><span class="cue" style="position: absolute; inset: 0; background: #ece6da; display: block"></span></span></span>
 </div>
@@ -452,54 +497,95 @@ details[open] .plus{transform:rotate(45deg)}
 <div class="rv" style="margin: 56px auto 0; max-width: 720px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px">
 <p class="cap" style="margin: 0; color: #e2644f">暖簾をくぐる · noren o kuguru</p>
 <h2 id="noren-h" class="serif" style="margin: 0; font-weight: 300; font-size: clamp(40px, 5.4vw, 84px); line-height: 1">The hardest step<br>is the curtain.</h2>
-<p style="margin: 0; color: #cfc8ba; max-width: 560px">A cloth curtain hung in a doorway usually means the place is open. Ducking through it is how you walk in — and the walk ends with you doing exactly that.</p>
+<p style="margin: 0; color: #cfc8ba; max-width: 560px">A cloth curtain hung in a doorway usually means the place is open. Ducking through it is how you walk in.</p>
 </div>
 </div>
 </section>
 
-<!-- THE WALK -->
+<!-- THE WALKS: map of neighbourhoods. Areas, texts and pin positions live in WALKS in the script at the bottom. -->
 <span id="tours"></span>
 <section id="walk" style="padding: 120px 0 140px">
 <div class="wrap">
-<p class="cap rv" style="margin: 0 0 22px; color: #e2644f">参 · The walk</p>
-<div class="grid12" style="align-items: stretch">
-<div class="clipin walk-img" style="grid-column: 1 / span 7; position: relative; min-height: 780px; overflow: hidden">
-<img class="zimg" src="img/alley-red-lanterns-narrow.jpg" alt="A narrow lane of small bars lit by red paper lanterns" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; filter: saturate(1.05) contrast(1.04)">
-<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,13,.1) 0%, rgba(11,11,13,0) 40%, rgba(11,11,13,.85) 100%)"></div>
-<svg aria-hidden="true" viewBox="0 0 600 760" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
-<path class="route" d="M90 690 C 170 610, 130 540, 220 500 S 380 420, 330 330 S 420 210, 510 130" fill="none" stroke="#f1e9da" stroke-width="2" stroke-dasharray="900" stroke-linecap="round" opacity=".85"></path>
-<g font-family="Shippori Mincho, serif" font-size="17" font-weight="800" text-anchor="middle">
-<circle cx="90" cy="690" r="17" fill="#c8402e"></circle><text x="90" y="696" fill="#ffffff">一</text>
-<circle cx="220" cy="500" r="16" fill="#0b0b0d" stroke="#f1e9da" stroke-width="1.5"></circle><text x="220" y="506" fill="#f1e9da">二</text>
-<circle cx="330" cy="330" r="16" fill="#0b0b0d" stroke="#f1e9da" stroke-width="1.5"></circle><text x="330" y="336" fill="#f1e9da">三</text>
-<circle cx="510" cy="130" r="17" fill="#c8402e"></circle><text x="510" y="136" fill="#ffffff">四</text>
+<p class="cap rv" style="margin: 0 0 22px; color: #e2644f">参 · The walks</p>
+<div class="grid12 rv" style="align-items: end; margin-bottom: 48px">
+<h2 class="serif" style="grid-column: 1 / span 6; margin: 0; font-weight: 300; font-size: clamp(44px, 5vw, 80px); line-height: .95">Pick a<br>neighbourhood.</h2>
+<p style="grid-column: 7 / span 6; margin: 0; color: #cfc8ba; max-width: 560px">Sixteen corners of Tokyo, from the old merchant quarter where Edo's roads began to the vintage lanes of Kōenji. Tap a place on the map, choose 2 or 4 hours, and send a request. Morning and daytime walks, up to 4 guests.</p>
+</div>
+<div class="grid12" style="align-items: start">
+<div class="rv" style="grid-column: 1 / span 7">
+<div class="mapbox">
+<svg id="walkMap" viewBox="0 0 1000 760" role="group" aria-label="Map of Tokyo with the neighbourhoods I guide">
+<defs>
+<pattern id="waves" width="36" height="18" patternUnits="userSpaceOnUse"><path d="M0 12 Q9 4 18 12 T36 12" fill="none" stroke="rgba(150,180,200,.16)" stroke-width="1.4"></path></pattern>
+<radialGradient id="vig" cx="55%" cy="45%" r="75%"><stop offset=".6" stop-color="#0b0b0d" stop-opacity="0"></stop><stop offset="1" stop-color="#0b0b0d" stop-opacity=".55"></stop></radialGradient>
+</defs>
+<rect width="1000" height="760" fill="#121215"></rect>
+<g stroke="rgba(236,230,218,.05)" stroke-width="1"><path d="M0 152H1000M0 304H1000M0 456H1000M0 608H1000M200 0V760M400 0V760M600 0V760M800 0V760"></path></g>
+<!-- Tokyo Bay -->
+<path d="M766.7 547.6 L720.0 614.5 L685.0 661.2 L669.5 855.6 L1077.8 855.6 L1077.8 544.5 L922.3 536.7 L867.8 560.0 L813.4 544.5 Z" fill="#0f171c"></path>
+<path d="M766.7 547.6 L720.0 614.5 L685.0 661.2 L669.5 855.6 L1077.8 855.6 L1077.8 544.5 L922.3 536.7 L867.8 560.0 L813.4 544.5 Z" fill="url(#waves)"></path>
+<!-- rivers: Tama, Arakawa, Sumida -->
+<path d="M-37.0 547.4 L74.1 606.7 L155.6 656.9 L218.5 698.0 L296.3 739.0 L381.5 789.2" fill="none" stroke="#25394a" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M758.9 -7.8 L870.2 22.6 L926.2 59.1 L1007.8 116.7" fill="none" stroke="#25394a" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M666.4 -7.8 L758.9 36.6 L833.6 68.4 L870.2 87.9 L899.7 136.9 L881.8 196.0 L864.7 247.4 L835.2 319.7 L825.8 378.8 L821.9 413.0 L796.3 479.1 L766.7 547.6" fill="none" stroke="#2c4557" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+<!-- Imperial Palace, Inokashira Park -->
+<ellipse cx="695.6" cy="364.0" rx="28" ry="23" fill="rgba(143,174,106,.13)"></ellipse>
+<ellipse cx="30.0" cy="297.9" rx="22" ry="14" fill="rgba(143,174,106,.13)"></ellipse>
+<!-- private railways (faint), Chuo Line (orange), Yamanote Line (green loop) -->
+<g fill="none" stroke="rgba(236,230,218,.16)" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"><path d="M506.0 488.1 L381.5 471.7 L314.8 439.8 L257.4 405.1 L138.2 347.6 L69.6 308.8 L55.6 282.8"></path><path d="M506.0 488.1 L442.6 522.3 L387.8 553.8 L357.1 600.8 L294.8 609.0 L255.2 631.4 L228.5 698.9"></path></g>
+<path d="M-18.5 285.1 L55.6 282.8 L127.8 281.0 L203.7 275.5 L261.9 273.7 L314.0 272.2 L373.1 271.5 L435.4 266.8 L489.8 292.5 L501.5 338.4 L611.9 360.1 L632.2 335.2 L666.4 287.0 L741.0 298.7 L762.8 333.7 L748.8 382.7" fill="none" stroke="#e08a3c" stroke-opacity=".45" stroke-width="3" stroke-linejoin="round"></path>
+<path d="M748.8 382.7 L762.8 333.7 L770.6 304.1 L786.2 233.4 L762.1 168.0 L725.5 122.9 L674.2 129.9 L645.4 143.9 L540.4 161.8 L513.9 238.0 L501.5 338.4 L510.0 432.5 L506.1 488.5 L537.3 539.8 L558.3 598.2 L587.8 633.2 L643.8 623.0 L676.5 544.5 L711.5 499.4 L716.2 451.1 Z" fill="none" stroke="#8fae6a" stroke-opacity=".55" stroke-width="3.5" stroke-linejoin="round"></path>
+<!-- quiet labels -->
+<g font-family="Cormorant Garamond, serif" font-style="italic" fill="rgba(236,230,218,.4)" font-size="18">
+<text x="850" y="712" font-size="24">Tokyo Bay</text>
+<text transform="translate(843.3 296.5) rotate(-72)">Sumida River</text>
+<text transform="translate(944 84) rotate(34)">Arakawa</text>
+<text transform="translate(92.6 650.1) rotate(-38)">Tama River</text>
+<text x="695.6" y="369.0" text-anchor="middle" font-size="14">Imperial Palace</text>
+<text x="575" y="566" fill="rgba(143,174,106,.75)">Yamanote Line</text>
+<text x="128" y="298" fill="rgba(224,138,60,.75)">Chūō Line</text>
 </g>
+<circle cx="748.6" cy="382.3" r="5" fill="#ece6da" opacity=".5"></circle>
+<text x="736.6" y="406.3" text-anchor="end" font-family="Inter, sans-serif" font-size="12" letter-spacing="2" fill="rgba(236,230,218,.45)">TOKYO STN.</text>
+<!-- compass + scale (2 km) -->
+<g fill="rgba(236,230,218,.55)" font-family="Inter, sans-serif" font-size="13" letter-spacing="2">
+<path d="M960 30 L970 60 L960 53 L950 60 Z"></path><text x="960" y="82" text-anchor="middle">N</text>
+<path d="M30 736 V744 H112 V736" fill="none" stroke="rgba(236,230,218,.55)" stroke-width="2"></path><text x="30" y="727">2 KM</text>
+</g>
+<rect width="1000" height="760" fill="url(#vig)" pointer-events="none"></rect>
+<g id="halo" aria-hidden="true"><circle class="hfill" r="62"></circle><circle class="hring" r="62"></circle></g>
+<g id="pins"></g>
 </svg>
-<p class="serif" style="position: absolute; right: 32px; bottom: 26px; margin: 0; font-style: italic; font-size: 24px; color: #f1e9da">Into the lanes</p>
 </div>
-<div class="rv2" style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 26px; padding: 8px 0 0 16px">
-<h2 class="serif" style="margin: 0; font-weight: 300; font-size: clamp(44px, 5vw, 80px); line-height: .95">Shinjuku<br>Night Walk</h2>
-<p style="margin: 0; color: #cfc8ba">How Shinjuku's tiny bars and izakaya really work — the cover charge, the small dish, how to order and how to read the room. At the end you choose a place and step inside on your own, confident.</p>
-<div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(236,230,218,.25)">
-<div style="padding: 16px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Duration</p><p class="serif" style="margin: 2px 0 0; font-size: 24px; line-height: 1.25">2 h or 4 h</p></div>
-<div style="padding: 16px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Group</p><p class="serif" style="margin: 2px 0 0; font-size: 24px; line-height: 1.25">Max 4 guests</p></div>
-<div style="padding: 16px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Meeting</p><p class="serif" style="margin: 2px 0 0; font-size: 24px; line-height: 1.25">Near Shinjuku Stn.</p></div>
-<div style="padding: 16px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Price</p><p class="serif" style="margin: 2px 0 0; font-size: 24px; line-height: 1.25">From &yen;7,000</p></div>
+<div id="areaChips" role="group" aria-label="Neighbourhoods by theme" style="margin-top: 18px; border-bottom: 1px solid rgba(236,230,218,.1)"></div>
 </div>
-<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
-<li style="display: flex; gap: 16px"><span class="mincho" style="color: #e2644f; width: 22px; flex: none">一</span><span>Meet near the station and get the lay of the land.</span></li>
-<li style="display: flex; gap: 16px"><span class="mincho" style="color: #e2644f; width: 22px; flex: none">二</span><span>Walk the lanes and hear how they came to be.</span></li>
-<li style="display: flex; gap: 16px"><span class="mincho" style="color: #e2644f; width: 22px; flex: none">三</span><span>Practise ordering and asking about charges.</span></li>
-<li style="display: flex; gap: 16px"><span class="mincho" style="color: #e2644f; width: 22px; flex: none">四</span><span>Pick your own bar — and duck through the curtain.</span></li>
-</ol>
-<p class="mut" style="margin: 0; font-size: 13px">The fee covers guiding only. Food and drinks are ordered and paid by guests at each place.</p>
-<div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: auto">
-<a class="pill cap" data-link="tourBooking" href="#" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; background: #c8402e; color: #ffffff; text-decoration: none; border-radius: 999px">Request a booking →</a>
+<div class="rv2 areapanel" id="areaPanel" style="grid-column: 8 / span 5">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><p class="cap" id="apTheme" style="margin: 0"></p><div class="pager"><button type="button" id="apPrev" aria-label="Previous neighbourhood">←</button><span class="cap mut" id="apCount"></span><button type="button" id="apNext" aria-label="Next neighbourhood">→</button></div></div>
+<h3 class="serif sw" style="margin: 14px 0 2px; font-weight: 300; font-size: clamp(36px, 3.6vw, 56px); line-height: 1" id="apName"></h3>
+<p class="mincho mut sw" id="apKanji" style="margin: 0 0 18px; font-size: 17px; letter-spacing: .12em"></p>
+<p class="sw" id="apDesc" style="margin: 0 0 20px; color: #cfc8ba"></p>
+<ol class="sw" id="apStops" style="list-style: none; margin: 0 0 22px; padding: 0; display: flex; flex-direction: column; gap: 10px"></ol>
+<div style="display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(236,230,218,.25); margin-bottom: 22px">
+<div style="padding: 14px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Meeting</p><p class="serif" id="apMeet" style="margin: 2px 0 0; font-size: 21px; line-height: 1.25"></p></div>
+<div style="padding: 14px 0; border-bottom: 1px solid rgba(236,230,218,.14)"><p class="cap mut" style="margin: 0">Group</p><p class="serif" style="margin: 2px 0 0; font-size: 21px; line-height: 1.25">Max 4 guests</p></div>
+</div>
+<p class="cap mut" style="margin: 0 0 10px">How long?</p>
+<div class="seg" role="group" aria-label="Length of the walk">
+<button type="button" data-len="2" aria-pressed="true">2 hours</button>
+<button type="button" data-len="4" aria-pressed="false">4 hours</button>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0 8px">
+<div><p class="cap mut" style="margin: 0 0 2px">Per guest</p><p class="serif" id="apPriceA" style="margin: 0; font-size: 30px; line-height: 1.1"></p></div>
+<div><p class="cap mut" style="margin: 0 0 2px">Private · up to 4</p><p class="serif" id="apPriceB" style="margin: 0; font-size: 30px; line-height: 1.1"></p></div>
+</div>
+<p class="mut" id="apLenNote" style="margin: 0 0 24px; font-size: 13px"></p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<button type="button" id="apBook" class="pill cap" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; background: #c8402e; color: #ffffff; border: 0; border-radius: 999px; cursor: pointer; font: inherit">Request this walk →</button>
 <a class="pill ghost cap" data-link="instagram" href="#" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 30px; border: 1px solid rgba(236,230,218,.55); text-decoration: none; border-radius: 999px">Ask a question</a>
 </div>
 </div>
 </div>
-<div class="grid12 rv" style="margin-top: 56px">
+<div class="grid12 rv" style="margin-top: 64px">
 <div style="grid-column: 1 / span 6; border-top: 1px solid rgba(236,230,218,.25); padding-top: 22px"><p class="cap mut" style="margin: 0">Private · On request</p><p class="serif" style="margin: 6px 0 8px; font-size: 30px">Your own walk</p><p style="margin: 0; color: #cfc8ba">Family or friends? Tell me what you're curious about — history, manners, food culture — and we'll shape a walk around it. <a class="lnk" data-link="instagram" href="#" style="color: #ece6da">Send a request →</a></p></div>
 <div style="grid-column: 7 / span 6; border-top: 1px solid rgba(236,230,218,.25); padding-top: 22px"><p class="cap mut" style="margin: 0">Before you arrive</p><p class="serif" style="margin: 6px 0 8px; font-size: 30px">Not visiting yet?</p><p style="margin: 0; color: #cfc8ba">Start with the stories and the manners above. When you land, you'll already know the why. <a class="lnk" href="#stories" style="color: #ece6da">Read first →</a></p></div>
 </div>
@@ -510,49 +596,55 @@ details[open] .plus{transform:rotate(45deg)}
 <section id="book" style="background: #121215; padding: 120px 0 130px; border-top: 1px solid rgba(236,230,218,.14)">
 <div class="wrap">
 <p class="cap rv" style="margin: 0 0 22px; color: #e2644f">肆 · Plans &amp; booking</p>
-<h2 class="serif rv" style="margin: 0 0 18px; font-weight: 300; font-size: clamp(40px, 5vw, 76px); line-height: 1">Two areas.<br>Two lengths.</h2>
-<p class="rv" style="margin: 0 0 48px; color: #cfc8ba; max-width: 620px">Walk with a local who explains the why behind what you see. Choose Shinjuku or Asakusa, and a short 2-hour walk or a relaxed 4-hour one. Groups of up to 4 guests.</p>
+<h2 class="serif rv" style="margin: 0 0 18px; font-weight: 300; font-size: clamp(40px, 5vw, 76px); line-height: 1">Any neighbourhood.<br>Two lengths.</h2>
+<p class="rv" style="margin: 0 0 48px; color: #cfc8ba; max-width: 620px">Every walk has the same simple price. Choose 2 hours for the highlights, or 4 hours for a slower, longer route through more of the area.</p>
 <div class="grid12 rv" style="row-gap: 24px">
 <div style="grid-column: span 6; border: 1px solid rgba(236,230,218,.2); padding: 30px">
-<p class="cap" style="margin: 0; color: #e2644f">Shinjuku · 新宿</p>
-<p class="serif" style="margin: 8px 0 12px; font-size: 32px; line-height: 1.1">Night lanes &amp; izakaya</p>
-<p style="margin: 0 0 18px; color: #cfc8ba">Tiny bars, the cover charge, the small dish, how to order and read the room — then step inside on your own.</p>
-<p class="cap mut" style="margin: 0 0 4px">Per guest</p>
-<p class="serif" style="margin: 0; font-size: 22px">2 hours · &yen;7,000</p>
-<p class="serif" style="margin: 4px 0 0; font-size: 22px">4 hours · &yen;12,000</p>
-<p class="cap mut" style="margin: 16px 0 4px">Private group · up to 4 guests</p>
-<p class="serif" style="margin: 0; font-size: 22px">2 hours · &yen;15,000</p>
-<p class="serif" style="margin: 4px 0 0; font-size: 22px">4 hours · &yen;26,000</p>
-<p class="mut" style="margin: 12px 0 0; font-size: 13px">4 hours adds a longer route through more of the area. Meeting point near Shinjuku Station.</p>
+<p class="cap" style="margin: 0 0 10px; color: #e2644f">Per guest</p>
+<p class="serif" style="margin: 0; font-size: 26px">2 hours · &yen;7,000</p>
+<p class="serif" style="margin: 4px 0 0; font-size: 26px">4 hours · &yen;12,000</p>
 </div>
 <div style="grid-column: span 6; border: 1px solid rgba(236,230,218,.2); padding: 30px">
-<p class="cap" style="margin: 0; color: #e2644f">Asakusa · 浅草</p>
-<p class="serif" style="margin: 8px 0 12px; font-size: 32px; line-height: 1.1">Old Tokyo, up close</p>
-<p style="margin: 0 0 18px; color: #cfc8ba">Sensoji, the temple approach and the quieter backstreets of the old downtown — what the rituals mean and how to join in respectfully.</p>
-<p class="cap mut" style="margin: 0 0 4px">Per guest</p>
-<p class="serif" style="margin: 0; font-size: 22px">2 hours · &yen;7,000</p>
-<p class="serif" style="margin: 4px 0 0; font-size: 22px">4 hours · &yen;12,000</p>
-<p class="cap mut" style="margin: 16px 0 4px">Private group · up to 4 guests</p>
-<p class="serif" style="margin: 0; font-size: 22px">2 hours · &yen;15,000</p>
-<p class="serif" style="margin: 4px 0 0; font-size: 22px">4 hours · &yen;26,000</p>
-<p class="mut" style="margin: 12px 0 0; font-size: 13px">4 hours adds a longer route through more of the area. Meeting point near Asakusa Station.</p>
+<p class="cap" style="margin: 0 0 10px; color: #e2644f">Private group · up to 4 guests</p>
+<p class="serif" style="margin: 0; font-size: 26px">2 hours · &yen;15,000</p>
+<p class="serif" style="margin: 4px 0 0; font-size: 26px">4 hours · &yen;26,000</p>
 </div>
 </div>
 <p class="mut rv" style="margin: 22px 0 56px; font-size: 13px">Prices in Japanese yen, per guest, or one flat price for a private group of up to 4 (best for 3 or more). The fee covers guiding only. Admission, food, drinks and transport are paid by guests directly. Tour fee: cash (JPY) on the day or Wise transfer. Once your booking is confirmed, it can’t be cancelled or refunded. If I have to cancel (for example, bad weather), you can pick a new date or get a full refund. <a class="lnk" href="/legal/#tours">Commercial disclosure</a></p>
 
 <div class="grid12 rv">
-<div style="grid-column: 1 / span 4"><h3 class="serif" style="margin: 0 0 12px; font-weight: 300; font-size: clamp(30px, 3.4vw, 48px); line-height: 1.05">Request a booking</h3><p style="margin: 0; color: #cfc8ba">Send your preferred date and plan. I'll reply by email to confirm availability and details — nothing is charged when you send this.</p></div>
+<div style="grid-column: 1 / span 4"><h3 class="serif" style="margin: 0 0 12px; font-weight: 300; font-size: clamp(30px, 3.4vw, 48px); line-height: 1.05">Request a booking</h3><p style="margin: 0; color: #cfc8ba">Send your preferred neighbourhood, length and date. I'll reply by email to confirm availability and details — nothing is charged when you send this.</p></div>
 <form id="bookForm" action="https://formspree.io/f/mlgqrrbd" method="POST" style="grid-column: 6 / span 7; display: grid; gap: 16px">
 <input type="hidden" name="_subject" value="Tour booking request (Sensei Japan)">
 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
-<label style="display:grid; gap:6px"><span class="cap mut">Plan</span>
-<select name="plan" required style="padding: 14px; background: #0b0b0d; color: #ece6da; border: 1px solid rgba(236,230,218,.35); font: inherit">
-<option value="">Choose a plan</option>
-<option>Shinjuku · 2 hours</option>
-<option>Shinjuku · 4 hours</option>
-<option>Asakusa · 2 hours</option>
-<option>Asakusa · 4 hours</option>
+<div style="display:grid; grid-template-columns: 2fr 1fr; gap:16px">
+<label style="display:grid; gap:6px"><span class="cap mut">Neighbourhood</span>
+<select name="area" id="fArea" required style="padding: 14px; background: #0b0b0d; color: #ece6da; border: 1px solid rgba(236,230,218,.35); font: inherit">
+<option value="">Choose an area</option>
+<option>Fukagawa & Kiyosumi</option>
+<option>Nihonbashi & Ningyōchō</option>
+<option>Yanaka, Nezu & Sendagi</option>
+<option>Ueno</option>
+<option>Asakusa</option>
+<option>Kita-Senju</option>
+<option>Sugamo</option>
+<option>Togoshi-Ginza</option>
+<option>Kichijōji</option>
+<option>Futako-Tamagawa</option>
+<option>Shimokitazawa</option>
+<option>Kōenji</option>
+<option>Nakano</option>
+<option>Jimbōchō</option>
+<option>Shinjuku</option>
+<option>Shibuya</option>
+<option>Not sure yet — help me choose</option>
 </select></label>
+<label style="display:grid; gap:6px"><span class="cap mut">Length</span>
+<select name="length" id="fLen" required style="padding: 14px; background: #0b0b0d; color: #ece6da; border: 1px solid rgba(236,230,218,.35); font: inherit">
+<option>2 hours</option>
+<option>4 hours</option>
+</select></label>
+</div>
 <label style="display:grid; gap:6px"><span class="cap mut">Booking type</span>
 <select name="booking_type" required style="padding: 14px; background: #0b0b0d; color: #ece6da; border: 1px solid rgba(236,230,218,.35); font: inherit">
 <option>Per guest (2h &yen;7,000 / 4h &yen;12,000 each)</option>
@@ -620,8 +712,8 @@ details[open] .plus{transform:rotate(45deg)}
 </details>
 
 <details style="border-bottom: 1px solid rgba(236,230,218,.2)">
-<summary style="display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 24px 0"><span class="serif" style="font-size: 25px; line-height: 1.2">Is the night walk okay if I don't drink?</span><span class="plus" aria-hidden="true" style="font-size: 26px; color: #e2644f; flex: none">+</span></summary>
-<p style="margin: 0 0 26px; color: #cfc8ba; max-width: 620px">Yes. Many places serve soft drinks and food, and the walk is about how the area works and how to feel at home in it.</p>
+<summary style="display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 24px 0"><span class="serif" style="font-size: 25px; line-height: 1.2">Which neighbourhood should I choose?</span><span class="plus" aria-hidden="true" style="font-size: 26px; color: #e2644f; flex: none">+</span></summary>
+<p style="margin: 0 0 26px; color: #cfc8ba; max-width: 620px">Choose by what you enjoy: Edo history and rivers, old temple streets, everyday local life, culture and subculture, or the big city. Not sure? Pick “Not sure yet” in the form and tell me what you like, and I'll suggest one.</p>
 </details>
 
 <details style="border-bottom: 1px solid rgba(236,230,218,.2)">
@@ -650,7 +742,7 @@ details[open] .plus{transform:rotate(45deg)}
 <p class="serif" aria-hidden="true" style="margin: 0; font-weight: 300; font-size: clamp(72px, 20.5vw, 312px); line-height: .8; letter-spacing: -.02em; white-space: nowrap; color: rgba(236,230,218,.92)">Sensei Japan</p>
 <div style="margin-top: 26px; padding-top: 18px; border-top: 1px solid rgba(236,230,218,.18); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #9d968a">
 <span>© <span id="yr">2026</span> Sensei Japan · Photos: Unsplash</span>
-<span style="display: flex; gap: 24px; flex-wrap: wrap"><a class="lnk" data-link="instagram" href="#">Instagram</a><a class="lnk" data-link="lessons" href="https://www.koyojapans.com">Japanese lessons</a><a class="lnk" href="#walk">The walk</a><a class="lnk" href="/legal/#tours">Legal notice</a><a class="lnk" href="/privacy/">Privacy</a></span>
+<span style="display: flex; gap: 24px; flex-wrap: wrap"><a class="lnk" data-link="instagram" href="#">Instagram</a><a class="lnk" data-link="lessons" href="https://www.koyojapans.com">Japanese lessons</a><a class="lnk" href="#walk">Walks</a><a class="lnk" href="/legal/#tours">Legal notice</a><a class="lnk" href="/privacy/">Privacy</a></span>
 </div>
 </footer>
 </section>
@@ -682,6 +774,132 @@ document.getElementById('bookForm').addEventListener('submit',async e=>{
   }catch(_){ m.innerHTML='Sorry, that did not send. Please email <a class="lnk" href="mailto:senseijapan.jissen@gmail.com">senseijapan.jissen@gmail.com</a> instead.'; }
   b.disabled=false;
 });
+/* ===== WALKS — the neighbourhoods on the map =====
+   x, y = position on the map (viewBox 1000 x 960, from real latitude/longitude).
+   lx, ly, la = where the label sits relative to the pin, and its anchor (start / end / middle).
+   To add an area: add an entry here AND an <option> with the same name in the booking form. */
+const WALKS = [
+  {id:"fukagawa", name:"Fukagawa & Kiyosumi", kanji:"深川・清澄白河・門前仲町", theme:"river", x:861,y:402, lx:0,ly:44,la:"middle", label:"Fukagawa",
+   meet:"Monzen-nakachō Stn.",
+   desc:"Edo's riverside low city: canals, old timber-yard streets and a busy temple-and-shrine town. The poet Bashō lived here; today old warehouses hold coffee roasters.",
+   stops:["Tomioka Hachimangū and the Fukagawa Fudō-dō temple street","Canals and the story of Edo's timber merchants","Kiyosumi-shirakawa's quiet streets and coffee roasters"]},
+  {id:"nihonbashi", name:"Nihonbashi & Ningyōchō", kanji:"日本橋・人形町", theme:"river", x:793,y:363, lx:26,ly:8,la:"start", label:"Nihonbashi",
+   meet:"Nihombashi Stn.",
+   desc:"The bridge where Edo's five great roads began, and the merchant streets around it. Some shops here have been run by the same families for generations.",
+   stops:["Nihonbashi Bridge — the zero point of Japan's roads","Old merchant streets and long-running shops","Ningyōchō's backstreets and Suitengū shrine"]},
+  {id:"yanaka", name:"Yanaka, Nezu & Sendagi", kanji:"谷中・根津・千駄木", theme:"old", x:746,y:189, lx:-26,ly:4,la:"end", label:"Yanaka",
+   meet:"Nippori Stn.",
+   desc:"A hilly pocket of old Tokyo with dozens of temples, wooden houses and a small shopping street. Locals call the area Yanesen.",
+   stops:["Temple lanes and the Yanaka cemetery","Yanaka Ginza and the “sunset steps” (Yūyake Dandan)","Nezu Shrine and its tunnel of red gates"]},
+  {id:"ueno", name:"Ueno", kanji:"上野", theme:"old", x:776,y:234, lx:-26,ly:14,la:"end",
+   meet:"Ueno Stn.",
+   desc:"A hilltop park of temples, shrines and museums, and below it Ameyoko — a market street that grew out of the post-war years.",
+   stops:["Ueno Park and the old temple grounds of Kan'eiji","Shinobazu Pond and the Benten-dō hall","Ameyoko: from post-war market to bargain street"]},
+  {id:"asakusa", name:"Asakusa", kanji:"浅草", theme:"old", x:858,y:229, lx:26,ly:8,la:"start",
+   meet:"Asakusa Stn.",
+   desc:"Sensōji, the temple approach and the quieter backstreets of the old downtown — what the rituals mean and how to join in respectfully.",
+   stops:["Kaminarimon and the Nakamise approach","Incense, purification and how to pray at Sensōji","Backstreets of the old downtown"]},
+  {id:"kitasenju", name:"Kita-Senju", kanji:"北千住", theme:"old", x:889,y:70, lx:-26,ly:8,la:"end",
+   meet:"Kita-Senju Stn.",
+   desc:"The first post town on the roads north from Edo — where Bashō set out on his famous journey. Today: lively shopping lanes and an easygoing local feel.",
+   stops:["The old post-town street","Where Bashō's “Narrow Road to the Deep North” began","Neighbourhood sentō (public baths) and how they work"]},
+  {id:"sugamo", name:"Sugamo", kanji:"巣鴨", theme:"daily", x:646,y:144, lx:-26,ly:8,la:"end",
+   meet:"Sugamo Stn.",
+   desc:"Nicknamed “Harajuku for grandmas”: a long shopping street of snacks, sweets and bright red underwear said to bring good health.",
+   stops:["Jizō-dōri shopping street","Kōganji temple and the “Togenuki Jizō”","Shio-daifuku, rice crackers and other local snacks"]},
+  {id:"togoshi", name:"Togoshi-Ginza", kanji:"戸越銀座", theme:"daily", x:554,y:679, lx:26,ly:8,la:"start",
+   meet:"Togoshi-ginza Stn.",
+   desc:"One of Tokyo's longest shopping streets: about 1.3 km of family-run shops and street snacks. A real neighbourhood, not a tourist strip.",
+   stops:["Croquettes and street snacks, the local way","Why a street this far from Ginza is called “Ginza”","How a Tokyo shōtengai keeps going"]},
+  {id:"kichijoji", name:"Kichijōji", kanji:"吉祥寺", theme:"daily", x:56,y:283, lx:-26,ly:-26,la:"start",
+   meet:"Kichijōji Stn.",
+   desc:"A favourite with Tokyo locals as a place to live: Inokashira Park with its pond and shrine, and Harmonica Yokochō, a tight maze of tiny shops.",
+   stops:["Inokashira Park and the Benzaiten shrine on the pond","Harmonica Yokochō, a maze of tiny shops","Local shopping streets and cafés"]},
+  {id:"futako", name:"Futako-Tamagawa", kanji:"二子玉川", theme:"daily", x:228,y:699, lx:26,ly:8,la:"start",
+   meet:"Futako-Tamagawa Stn.",
+   desc:"A riverside town on the Tama River, long a weekend outing spot for Tokyo families. Wide riverbanks, a new shopping district and a calm side of Tokyo few visitors see.",
+   stops:["The Tama River banks","From riverside resort to new town: how Futako changed","Todoroki Valley, a wooded ravine inside Tokyo (4-hour walk)"]},
+  {id:"shimokita", name:"Shimokitazawa", kanji:"下北沢", theme:"sub", x:382,y:472, lx:0,ly:-30,la:"middle",
+   meet:"Shimo-Kitazawa Stn.",
+   desc:"Small theatres, vintage clothing and live music in a maze of narrow streets — Tokyo's laid-back creative side.",
+   stops:["Vintage and second-hand shops","Small theatres and live houses","What changed when the railway went underground"]},
+  {id:"koenji", name:"Kōenji", kanji:"高円寺", theme:"sub", x:314,y:272, lx:0,ly:46,la:"middle",
+   meet:"Kōenji Stn.",
+   desc:"Punk, vintage and covered shopping arcades along the Chūō Line. Every August the streets fill for a huge Awa-odori dance festival.",
+   stops:["Vintage shops and covered arcades","Live houses and the story of Kōenji punk","Kōenji Hikawa Shrine and its small weather shrine"]},
+  {id:"nakano", name:"Nakano", kanji:"中野", theme:"sub", x:373,y:271, lx:0,ly:-30,la:"middle",
+   meet:"Nakano Stn.",
+   desc:"Nakano Broadway, a 1960s shopping complex now packed with collectors' shops for manga, figures and vintage toys — and the busy arcades around it.",
+   stops:["Nakano Broadway and its collectors' shops","Sun Mall shopping arcade","How Nakano became a collectors' town"]},
+  {id:"jimbocho", name:"Jimbōchō", kanji:"神保町", theme:"sub", x:714,y:316, lx:-26,ly:8,la:"end",
+   meet:"Jimbōchō Stn.",
+   desc:"Tokyo's book town: more than a hundred second-hand bookshops in a few blocks — and an unexpected love of curry.",
+   stops:["Second-hand bookshops and how to browse them","Why the book town loves curry","Old coffee houses (kissaten)"]},
+  {id:"shinjuku", name:"Shinjuku", kanji:"新宿", theme:"city", x:501,y:338, lx:-26,ly:8,la:"end",
+   meet:"Shinjuku Stn.",
+   desc:"Before the skyscrapers it was a post town on the road west. A daytime walk through the station maze, a shrine beside the crowds and lanes left from the post-war years.",
+   stops:["How to find your way in one of the world's busiest stations","Hanazono Shrine, right beside the crowds","Post-war lanes and how they began"]},
+  {id:"shibuya", name:"Shibuya", kanji:"渋谷", theme:"city", x:506,y:488, lx:26,ly:8,la:"start",
+   meet:"Shibuya Stn.",
+   desc:"The crossing everyone films, the dog everyone knows — and the river that still runs under the streets.",
+   stops:["The story of Hachikō","How the Scramble Crossing works","Tracing the hidden Shibuya River"]}
+];
+const THEMES = {
+  river:{name:"Edo & the river", jp:"江戸と川", c:"#74a9d4"},
+  old:  {name:"Old Tokyo",       jp:"下町",     c:"#e2644f"},
+  daily:{name:"Everyday streets",jp:"商店街",   c:"#d9a441"},
+  sub:  {name:"Culture & subculture", jp:"文化", c:"#b48be0"},
+  city: {name:"Big city",        jp:"都心",     c:"#d8d1c3"}
+};
+const PRICE = {2:{guest:"¥7,000", group:"¥15,000"}, 4:{guest:"¥12,000", group:"¥26,000"}};
+const LEN_NOTE = {2:"The highlights at an easy pace.", 4:"A longer route through more of the area, with time for a break."};
+(function(){
+  const NS="http://www.w3.org/2000/svg", map=document.getElementById('walkMap'), pins=document.getElementById('pins'), chips=document.getElementById('areaChips'), halo=document.getElementById('halo'), panel=document.getElementById('areaPanel');
+  const $=id=>document.getElementById(id);
+  let i=WALKS.findIndex(w=>w.id==='yanaka'), len=2, first=true;
+  const el=(tag,attrs)=>{const n=document.createElementNS(NS,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);return n;};
+  const pick=w=>{i=WALKS.indexOf(w); render(); if(window.matchMedia('(max-width:900px)').matches) panel.scrollIntoView({behavior:'smooth',block:'start'});};
+  WALKS.forEach(w=>{
+    const g=el('g',{class:'pin',tabindex:'0',role:'button','aria-label':w.name+' — '+THEMES[w.theme].name,'data-id':w.id,'data-theme':w.theme,transform:`translate(${w.x} ${w.y})`,style:'--c:'+THEMES[w.theme].c});
+    g.append(el('circle',{r:'44',fill:'transparent'}), el('circle',{class:'pulse',r:'18'}), el('circle',{class:'ring',r:'15'}), el('circle',{class:'dot',r:'5'}));
+    const t=el('text',{x:w.lx,y:w.ly,'text-anchor':w.la}); t.textContent=w.label||w.name; g.append(t);
+    g.addEventListener('click',()=>pick(w)); g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(w);}});
+    pins.append(g);
+  });
+  Object.entries(THEMES).forEach(([k,t])=>{
+    const row=document.createElement('div'); row.className='trow'; row.style.setProperty('--c',t.c);
+    row.innerHTML='<span class="tname cap"><span class="tdot"></span>'+t.name+' <span class="jp">'+t.jp+'</span></span><div class="tbtns"></div>';
+    WALKS.filter(w=>w.theme===k).forEach(w=>{const b=document.createElement('button'); b.type='button'; b.className='chip'; b.dataset.id=w.id; b.textContent=w.name; b.addEventListener('click',()=>pick(w)); row.lastChild.append(b);});
+    const hl=on=>{map.classList.toggle('dim',on); pins.querySelectorAll('.pin').forEach(p=>p.classList.toggle('hl',on&&p.dataset.theme===k));};
+    row.addEventListener('mouseenter',()=>hl(true)); row.addEventListener('mouseleave',()=>hl(false));
+    chips.append(row);
+  });
+  function render(){
+    const cur=WALKS[i], th=THEMES[cur.theme];
+    panel.style.setProperty('--c',th.c);
+    $('apTheme').innerHTML=''; const tt=document.createElement('span'); tt.style.color=th.c; tt.textContent=th.name+' · '+th.jp; $('apTheme').append(tt);
+    $('apCount').textContent=String(i+1).padStart(2,'0')+' / '+WALKS.length;
+    $('apName').textContent=cur.name; $('apKanji').textContent=cur.kanji;
+    $('apDesc').textContent=cur.desc; $('apMeet').textContent='Near '+cur.meet;
+    const ol=$('apStops'); ol.textContent='';
+    cur.stops.forEach((s,n)=>{const li=document.createElement('li'); li.style.cssText='display:flex;gap:16px';
+      li.innerHTML='<span class="mincho" style="color:'+th.c+';width:22px;flex:none">'+'一二三'[n]+'</span>'; const sp=document.createElement('span'); sp.textContent=s; li.append(sp); ol.append(li);});
+    $('apPriceA').textContent=PRICE[len].guest; $('apPriceB').textContent=PRICE[len].group; $('apLenNote').textContent=LEN_NOTE[len];
+    $('apBook').textContent='Request '+(cur.label||cur.name)+' · '+len+' h →';
+    document.querySelectorAll('.seg button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.len===len)));
+    pins.querySelectorAll('.pin').forEach(p=>{const on=p.dataset.id===cur.id; p.classList.toggle('on',on); p.setAttribute('aria-pressed',String(on)); if(on) pins.append(p);});
+    chips.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.id===cur.id)));
+    halo.style.setProperty('--c',th.c); halo.style.transform=`translate(${cur.x}px, ${cur.y}px)`;
+    if(first){ halo.style.transition='none'; requestAnimationFrame(()=>halo.style.transition=''); first=false; }
+  }
+  const swap=()=>{panel.classList.remove('swap'); void panel.offsetWidth; panel.classList.add('swap');};
+  const go=d=>{i=(i+d+WALKS.length)%WALKS.length; render(); swap();};
+  $('apPrev').addEventListener('click',()=>go(-1)); $('apNext').addEventListener('click',()=>go(1));
+  pins.addEventListener('click',swap); chips.addEventListener('click',e=>{if(e.target.closest('.chip')) swap();});
+  document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{len=+b.dataset.len; render();}));
+  $('apBook').addEventListener('click',()=>{ const cur=WALKS[i]; $('fArea').value=cur.name; $('fLen').value=len+' hours'; $('bookForm').scrollIntoView({behavior:'smooth',block:'center'}); setTimeout(()=>$('fArea').focus({preventScroll:true}),600); });
+  render();
+})();
 document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
